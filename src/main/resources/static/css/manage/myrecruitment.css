@@ -1,0 +1,320 @@
+.hire_info .container {
+  margin: 0 auto;
+  float: none;
+}
+
+.container {
+  float: left;
+  /* width: 790px; */
+  width: 830px!important;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.tipfir {
+  padding-left: 0;
+  line-height: 16px;
+  padding: 20px 0 15px 15px;
+  width:100%;
+  text-align:center;
+}
+
+.hire_info .container .modwrap {
+  border: none;
+}
+
+.box_table {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.hire_info .box_table th {
+  position: relative;
+  zoom: 1;
+}
+.box_table th {
+  width: 120px;
+  font-weight: normal;
+  text-align: right;
+  padding: 7px 10px 7px 0;
+  height: 34px;
+  line-height: 34px;
+  color: #585858;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.box_table th span {
+  float: right;
+}
+.box_table th i, .disabledCateSel .othcheb i {
+  /* float: left; */
+  line-height: 29px;
+  vertical-align: middle;
+  font-family: Tahoma;
+  font-style: normal;
+  color: #EE2200;
+  padding-right: 10px;
+}
+.box_table td {
+  padding: 7px 0;
+  color: #333;
+  vertical-align: middle;
+}
+.zidx91 {
+  z-index: 91;
+}
+.contedit {
+  position: relative;
+  float: left;
+  display: inline;
+  vertical-align: middle;
+}
+.container .box_table .select {
+  display: inline-block;
+  margin-right: 20px;
+  padding-left: 18px;
+  background: url(http://pic2.58.com/ui7/job/hire/radio_bg.png?v=4);
+  background-repeat: no-repeat;
+  color: #282828;
+  cursor: pointer;
+  line-height: 14px;
+  height: 14px;
+  font-weight: bold;
+}
+.container .box_table .off {
+  background-position: 0 -14px;
+  font-weight: normal;
+}
+container .select .tip {
+  font-size: 12px;
+  color: #585858;
+  padding-left: 5px;
+}
+
+.textstyle {
+  float: left;
+  display: inline;
+  height: 22px;
+  line-height: 22px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-color: #ccc #e8e8e8 #e8e8e8 #ccc;
+  margin-right: 5px;
+}
+
+#txtCompName, #enterpriseName, #txtAliasName {
+  width: 310px;
+}
+.c99 {
+  color: #C7C7C7;
+}
+#seleIndCate {
+  width: 285px;
+}
+.selestyle {
+  float: left;
+  display: inline;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 35px 0 10px;
+  border: 1px solid #ccc;
+  cursor: default;
+  background: url(http://pic2.58.com/ui7/job/hire/job_icon_db.gif) #fff right top no-repeat;
+  margin-right: 5px;
+  overflow: hidden;
+  zoom: 1;
+}
+.introcont {
+  line-height: 26px;
+  border: 1px solid #C8C8C8;
+  padding: 5px 10px;
+  margin-top: -1px;
+  vertical-align: top;
+  resize: none;
+  overflow: auto;
+}
+#txtCompIntro {
+  /* width: 430px; */
+  width: 500px;
+  height: 156px;
+}
+.zidx01 {
+  z-index: 1;
+}
+
+.welfare li, .brightspot li {
+  float: left;
+  white-space: nowrap;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  line-height: 26px;
+  text-align: center;
+  height: 26px;
+  border: 1px solid #c8c8c8;
+  margin-right: 9px;
+  cursor: pointer;
+}
+.welfare li.active, .brightspot li.active {
+  border: 2px solid #f28748;
+  height: 24px;
+  padding: 0 14px;
+  background: url(http://pic2.58.com/ui7/job/hire/sel_bg.png?v=sdfsd2) no-repeat right bottom;
+}
+#txtOthBrig1 {
+  padding: 0px;
+  padding-left: 5px;
+  height: 26px;
+}
+#txtOthBrig1 {
+  float: left;
+  width: 142px;
+  border: 1px solid #CDCDCD;
+  margin: 0;
+}
+.addbrig {
+  height: 28px;
+  border: 1px solid #dcdee1;
+  border-left: none;
+  width: 69px;
+  text-align: center;
+  color: #585858;
+  background: none;
+  background: #fafafa;
+  font-weight: normal;
+}
+a.w_local {
+  width: 75px;
+  background-position: 0 0;
+}
+
+a.w_local, a.w_phone, a.w_localn, a.w_phonen {
+  position: relative;
+  display: inline-block;
+  font: 12px/29px Arial, "宋体";
+  color: #666!important;
+  text-align: right;
+  padding-right: 10px;
+}
+
+a.w_local, a.w_phone, a.w_localn, a.w_phonen, .img_selector, .img_selector.hover, a.item_close, .drag .img_selector, a.w_local span em {
+  background: url(http://pic2.58.com/ui7/post/img/image_upload.png?2012717) no-repeat;
+}
+.f12 {
+  font-size: 12px;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.c_ccc {
+  color: #ccc;
+}
+.mr10 {
+  margin-right: 10px;
+}
+#videoedit {
+  position: relative;
+  display: block;
+}
+object[Attributes Style] {
+  float: left;
+  vertical-align: top;
+  width: 86px;
+  height: 30px;
+}
+
+a.w_local span {
+  position: absolute;
+  width: 100px;
+  line-height: 20px;
+  display: block;
+  background-color: #fffee0;
+  border: #f5e493 1px solid;
+  text-align: left;
+  padding: 0 10px;
+  left: 0;
+  top: 35px;
+  color: #999!important;
+}
+
+.upload_localpic_btn {
+  width: 89px;
+  height: 29px;
+  overflow: hidden;
+  text-indent: -999em;
+  display: inline-block;
+  background-position: 0 -30px;
+  cursor: pointer;
+}
+
+.upload_pic_btn, .upload_localpic_btn, .save_btn, .upload_phonebtn, .videoclose {
+  background: url(/images/upload.png) no-repeat;
+}
+.contedit .linkTip {
+  line-height: 32px;
+  float: left;
+}
+.newpyn {
+  margin-top: 8px;
+  _margin-top: 10px;
+  float: left;
+  display: inline;
+  margin-right: 5px;
+}
+.newpyn input {
+  margin: 0 8px;
+  margin: -4px 5px -2px\0;
+  _margin: -6px 5px -3px;
+}
+#txtPhone, #txtContacts {
+  width: 168px;
+}
+#txtCompEmail {
+  width: 170px;
+}
+#txtCompSite {
+  width: 289px;
+}
+#txtCompAddr {
+  /* width: 372px; */
+  width: 343px;
+}
+.zidx71 {
+  z-index: 71;
+}
+.compmap {
+  width: 608px;
+  height: 308px;
+  border: 1px solid #E6E6E6;
+  margin-top: 10px;
+  overflow: hidden;
+  zoom: 1;
+}
+.info_confirm .bb2 .int_b {
+  width: 196px;
+}
+.bb2 .int_b {
+  background-position: right -22px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 2px 4px 0;
+  font-size: 22px;
+}
+.int_b {
+  width: 84px;
+  float: left;
+  display: inline;
+  background: url(http://pic2.58.com/ui7/job/hire/hire_sp_btn.gif) no-repeat;
+  border: none;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 2px 4px 0;
+}
+.tangram-suggestion{
+	z-index:99;
+}

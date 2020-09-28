@@ -1,0 +1,569 @@
+.right_top .on .btn-b {
+  color: #fff;
+  padding-right: 10px;
+  margin-left: 10px;
+  line-height: 22px;
+  height: 25px;
+  display: inline-block;
+  overflow: hidden;
+  background: url(/images/button.png) no-repeat right 0;
+}
+
+.right_top .on {
+  margin-left: 5px;
+  margin-top: 8px;
+  height: 25px;
+  line-height: 22px;
+  display: inline-block;
+  background: url(/images/button.png) no-repeat left 0;
+}
+
+.text-left {
+  text-align: left;
+}
+.myresume_tip {
+  background: #fff7e3;
+  border: 1px solid #ffce6b;
+  padding: 5px 10px;
+
+  color: #707070;
+}
+.clearfix, .rightBody {
+  display: block;
+  zoom: 1;
+}
+.indicator, .safe-sj {
+  background-image: url(/images//vipicon.png);
+  background-repeat: no-repeat;
+}
+.tit {
+  padding: 0 0 0 10px;
+  font-weight: bold;
+  color: #4b4b4b;
+  font-size: 14px;
+  line-height: 33px;
+  background-color: #f4f4f4;
+  position:relative;
+}
+.info-con {
+  padding: 25px 0 0 0;
+}
+.resume-item {
+  line-height: 30px;
+  height: 30px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  clear: both;
+  zoom: 1;
+}
+.label {
+  display: inline-block;
+  float: left;
+  width: 115px;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: #4b4b4b;
+}
+.item-info {
+  float: left;
+
+}
+.text {
+  float: left;
+  padding: 6px 8px;
+  border: solid 1px #ccc;
+  height: 16px;
+  line-height: 16px;
+  font-size: 14px;
+  width: 232px;
+  color: #4b4b4b;
+  overflow: hidden;
+}
+.label b {
+  color: #ee3202;
+  font-family: 'SimSun';
+  font-weight: normal;
+  margin-right: 10px;
+}
+.spacing2 {
+  width: 2em;
+  display: inline-block;
+}
+.sel-text {
+  padding: 6px 30px 6px 8px;
+  float: left;
+  border: solid 1px #ccc;
+  height: 16px;
+  line-height: 16px;
+  font-size: 14px;
+  width: 210px;
+  color: #4b4b4b;
+  overflow: hidden;
+}
+.w80 {
+  width: 80px;
+}
+.w90 {
+  width: 90px;
+}
+.sel-arrow {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: 0 1px;
+  cursor: pointer;
+  background: url('/images/pub_resume_ico.png') no-repeat;
+}
+.select_input_div{
+	float:left;position:relative;
+}
+.isAgree {
+  padding: 10px 0 0 125px;
+  font-size: 14px;
+}
+.sel-option {
+  padding: 1px;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  background: #fff;
+  border: solid 1px #ccc;
+  box-shadow: 0 0 3px #e5e5e5;
+  z-index: 10;
+  display: none;
+}
+.w116 {
+  width: 116px;
+}
+.sel-option a {
+  display: block;
+  line-height: 26px;
+  height: 26px;
+  overflow: hidden;
+  padding-left: 5px;
+  color: #4b4b4b;
+  text-decoration: none;
+}
+
+
+
+/*-----------------------------------------------*/
+.basicInfo {
+  _margin-bottom: 15px;
+  position: relative;
+}
+.typeListInfo h3 {
+  background-color: #FAFAFA;
+  height: 36px;
+  line-height: 36px;
+  border-top: 1px solid #E4E4E4;
+  padding-left: 10px;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  zoom: 1;
+}
+
+.typeListInfo h3 a.changeBtn, .typeListInfo h3 a.hideBtn, .typeListInfo h3 a.addBtn {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #EFC2A2;
+  background-color: #FFEAD9;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666;
+  padding: 0 15px;
+  position: absolute;
+  right: 17px;
+  top: 5px;
+}
+
+.typeListInfo .basicConShow dl {
+  padding: 15px 0 20px 25px;
+  color: #000;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.typeListInfo .basicConShow dd, .typeListInfo .basicConShow dt {
+  clear: both;
+}
+.typeListInfo .basicConShow dt span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.typeListInfo .basicConShow dt .sexAge {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 15px;
+}
+.typeListInfo .basicConShow dl .title {
+  color: #9C9C9C;
+  padding-right: 5px;
+}
+.typeListInfo .basicConShow dl span.jobType {
+  white-space: normal;
+}
+.typeListInfo .basicConShow dl .divide {
+  padding: 0 8px;
+  color: #D4D4D4;
+  line-height: 28px;
+}
+#containerexperience {
+  clear: both;
+}
+.experInfo {
+  position: relative;
+}
+
+.typeListInfo h3 .tips {
+  font-size: 12px;
+  color: #6B9EF4;
+  font-weight: 400;
+}
+.typeListInfo h3 .hideTips {
+  position: absolute;
+  right: 28px;
+  top: -30px;
+  border: 1px solid #F5E493;
+  background-color: #FFFEE0;
+  font-size: 12px;
+  color: #B8B8B8;
+  padding: 0 5px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  display: none;
+}
+
+.typeListInfo h3 a.hideBtn {
+  right: 80px;
+  background-color: #F1F1F1;
+  border-color: #D8D8D8;
+}
+
+.typeListInfo .showList, .typeListInfo .schoolDetail {
+  padding: 15px 0 8px 20px;
+  border-bottom: 1px dashed #EEE;
+  position: relative;
+  zoom: 1;
+}
+.typeListInfo .showList p.detailList {
+  width: 710px;
+}
+.typeListInfo .showList p {
+  padding-bottom: 10px;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.typeListInfo .showList span {
+  display: block;
+  float: left;
+  line-height: 20px;
+  font-size: 14px;
+  color: #404040;
+  padding: 0 5px;
+}
+
+.typeListInfo .showList span.divide {
+  position: relative;
+  top: -1px;
+  left: 0;
+  color: #EAEAEA;
+}
+.typeListInfo .showList .detailCon span.tlTitle {
+  text-align: left;
+  width: auto;
+  color: #404040;
+}
+.typeListInfo .showList .detailCon span {
+  float: left;
+  width: 660px;
+  line-height: 20px;
+  color: #999;
+}
+.typeListInfo .showList .operBtn {
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  display: none;
+}
+.typeListInfo .showList a {
+  padding-right: 8px;
+}
+.eduInfo {
+  position: relative;
+}
+
+.typeListInfo .infoContent {
+  padding-top: 20px;
+}
+
+.infoContent dl {
+  clear: both;
+  font-size: 14px;
+  color: #404040;
+  margin-bottom: 14px;
+  height: 34px;
+  zoom: 1;
+}
+.infoContent dt {
+  width: 115px;
+  text-align: right;
+  line-height: 34px;
+}
+.infoContent dt, .infoContent dd {
+  float: left;
+}
+.infoContent dd {
+  line-height: 34px;
+  position: relative;
+  zoom: 1;
+}
+
+.typeListInfo .hasSel {
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+.infoContent dl input {
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #C7C7C7;
+  padding-left: 5px;
+  color: #333;
+  font-size: 14px;
+  float: left;
+}
+.w236 {
+  width: 236px;
+}
+.infoContent .setBox {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  background-color: #FFF;
+  border: 1px solid #C8C8C8;
+}
+.infoContent dt b, .typeListInfo h3 b {
+  color: #FF1212;
+  position: relative;
+  top: 5px;
+  left: 0;
+  padding: 0 10px 0 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.plr5 {
+  padding: 0 5px;
+}
+.infoContent .yearSel .setBox {
+  width: 235px;
+  padding: 10px 25px;
+}
+.infoContent .timeSel i {
+  position: absolute;
+  top: 50px;
+}
+i.prevIcon, i.nextIcon, i.prevHover, i.nextHover {
+  height: 16px;
+  width: 10px;
+  background-position: -4px -62px;
+  cursor: pointer;
+}
+
+.typeListInfo .salInfo, .typeListInfo .timeInfo, .typeListInfo .linkage {
+  position: relative;
+  zoom: 1;
+  float: left;
+}
+.infoContent .timeSel input {
+  text-align: center;
+  padding-left: 0;
+}
+.w43 {
+  width: 43px;
+}
+.hasSetBox {
+  cursor: text;
+}
+.infoContent .timeSel ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.yearSel, .monthSel {
+  float: left;
+  height: 34px;
+  position: relative;
+  zoom: 1;
+}
+.typeListInfo .btnDiv {
+  padding-bottom: 20px;
+  overflow: hidden;
+  zoom: 1;
+  padding-top: 15px;
+}
+
+
+.typeListInfo .saveResume, .typeListInfo .saveBasicInfo, .typeListInfo .saveBtn, .typeListInfo .cancelBtn {
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+  color: #FFF;
+  padding: 0 25px;
+  font-size: 16px;
+  border-bottom: 1px solid #BE520E;
+  margin-left: 115px;
+  float: left;
+  font-weight: 700;
+}
+
+.typeListInfo .saveBasicInfo, .typeListInfo .saveBtn {
+  background-position: 0 -76px;
+  border: 0;
+  border-bottom: 2px solid #2E4C7F;
+  cursor: pointer;
+}
+.postBtn {
+  background: url(http://pic2.58.com/ui7/job/resume/jl_postBtn.png) repeat-x 0 0 transparent;
+}
+.tit a.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: url(/images/top_box_close.gif) no-repeat 0 0;
+  padding-left: 0px;
+}
+
+.infoContent, .postSecPage .postContent {
+  padding-top: 35px;
+  position: relative;
+  zoom: 1;
+  width: 1000px;
+  margin: 0 auto;
+}
+.infoContent .salInfo, .infoContent .timeInfo, .infoContent .linkage {
+  position: relative;
+  zoom: 1;
+  float: left;
+}
+i.selIcon {
+  height: 33px;
+  width: 23px;
+  cursor: pointer;
+  background-position: -1px -24px;
+}
+.infoContent dl .f-c7 {
+  color: #C7C7C7;
+}
+.infoContent dl input {
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #C7C7C7;
+  padding-left: 5px;
+  color: #333;
+  font-size: 14px;
+  float: left;
+}
+.w115 {
+  width: 115px;
+}
+.infoContent .hasSel {
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+.infoContent .textCon {
+  height: 88px;
+  width: 477px;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  resize: none;
+  font-size: 14px;
+}
+.infoContent .textDiv {
+  height: 112px;
+  width: 487px;
+  border: 1px solid #C8C8C8;
+  padding: 5px;
+  float: left;
+  position: relative;
+  zoom: 1;
+  background-color: #FFF;
+}
+.infoContent dd {
+  line-height: 34px;
+  width: 715px;
+  position: relative;
+  zoom: 1;
+}
+.infoContent .btnDiv {
+  padding-bottom: 20px;
+  overflow: hidden;
+  zoom: 1;
+  padding-top: 15px;
+}
+
+.infoContent .saveResume, .infoContent .saveBasicInfo, .infoContent .saveBtn, .infoContent .cancelBtn {
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+  color: #FFF;
+  padding: 0 25px;
+  font-size: 16px;
+  border-bottom: 1px solid #BE520E;
+  margin-left: 285px;
+  float: left;
+  font-weight: 700;
+}
+
+.infoContent .saveBasicInfo, .infoContent .saveBtn {
+  background-position: 0 -76px;
+  border: 0;
+  border-bottom: 2px solid #2E4C7F;
+  cursor: pointer;
+}
+.infoContent a.cancelBtn {
+  color: #636465;
+  background: 0 0;
+  border: 0;
+  padding: 0;
+}
+.infoContent .saveAddBtn, .infoContent .cancelBtn {
+  margin-left: 20px;
+}
+.infoContent .inputTips {
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  font-size: 12px;
+  color: silver;
+  padding-right: 5px;
+  display: block;
+}
+.f-orange {
+  color: #FD7543;
+}
+.infoContent .inputTips .totalNum {
+  padding: 0 2px;
+}
+.w302{
+	width:302px;
+}

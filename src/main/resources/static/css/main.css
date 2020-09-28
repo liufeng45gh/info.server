@@ -1,0 +1,132 @@
+.search_element{
+	float: left; 
+	margin-top: 20px;
+}
+.label {
+    display: inline-block;
+    float: left;
+    width: 115px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 14px;
+    color: #4b4b4b;    
+}
+
+.h30{
+	height:30px;line-height:30px;
+}
+
+.select_input_div {
+    float: left;
+    position: relative;
+}
+.sel-text {
+    padding: 6px 30px 6px 8px;
+    float: left;
+    border: solid 1px #ccc;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    width: 210px;
+    color: #4b4b4b;
+    overflow: hidden;
+}
+.sel-arrow {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: 0 1px;
+    cursor: pointer;
+    background: url('/images/pub_resume_ico.png') no-repeat;
+}
+.sel-option {
+    padding: 1px;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    background: #fff;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 3px #e5e5e5;
+    z-index: 10;
+    display: none;
+}
+.select_input_div {
+    float: left;
+    position: relative;
+}
+.item-info {
+    float: left;
+}
+.sel-option a {
+    display: block;
+    line-height: 26px;
+    height: 26px;
+    overflow: hidden;
+    padding-left: 5px;
+    color: #4b4b4b;
+    text-decoration: none;
+}
+.w80 {
+    width: 80px;
+}
+.w116 {
+    width: 116px;
+}
+.search_button{
+  width: 100px;
+  background-color: #d3292e;
+  border: 1px solid #d50;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 33px;
+  line-height: 33px;
+  overflow: hidden;
+  padding: 0 15px;
+  text-align:center;
+  cursor: pointer;
+}
+.manageOnly{
+	display:none;
+}
+.dd{
+	//margin-top:5px;
+	height:30px;
+	line-height:30px;
+}
+.showDiv dl{
+	 padding: 15px 0 20px 25px;
+    color: #000;
+    font-size: 14px;
+    position: relative;
+}
+
+.simple_button {
+    background: #ed7612;
+    border: 1px solid #d50;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.simple_button a{
+	color: white;
+}
+.gap {
+    color: #ccc;
+    margin: 0 6px;
+    margin-top: 0px;
+    margin-right: 6px;
+    margin-bottom: 0px;
+    margin-left: 6px;
+    font-family: '宋体';
+}

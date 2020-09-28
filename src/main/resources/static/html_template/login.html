@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0077)http://passport.58.com/login?PGTID=14383552399390.3367623526137322&ClickID=71 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户登录-58同城</title>
+
+<link rel="Shortcut Icon" href="http://img.58cdn.com.cn/images/favicon.ico" type="image/x-icon">
+
+<script src="/script/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="./login_files/boot_passport_version_v0.js" type="text/javascript"></script>
+<script type="text/javascript" src="./login_files/f01f02dc906c8e6734ed04749e5db7cb_102.js"></script>
+
+<link rel="stylesheet" href="/css/login_6_v20150304144336.css" type="text/css"><style type="text/css">
+*:focus {outline: none}
+#conright{background:#ffffff; border-bottom:4px solid #f9f9f9; padding-bottom:0;width:404px;}
+.scrool-bg{border:2px solid #dedede; background:none;width:400px;padding:25px 0 0;overflow:hidden;height:auto!important;height:406px;min-height:406px;position:relative;}
+.logintit{background:#fffdcc; border:1px solid #f2e2ad; padding:5px 10px; line-height:22px; overflow:hidden}
+.logintit .red{color:#f23f0f}
+.logintit input,.logintit label{margin:0;cursor:pointer; vertical-align:middle; display:inline-block}
+.logintit label{padding-left:6px; _margin-top:3px}
+#scrool1{margin-left:20px}
+.logpic{text-align:right;padding-right:5px;width:50px; color:#666; font-size:14px; float:left}
+#conright .loginbox{padding:0 23px 15px;line-height:20px;min-height:240px;}
+#conright .loginbox #pulogin{padding:0 20px;}
+#conright .loginbox .inp{width:210px; height:22px; line-height:22px; border:1px solid #ddd; float:left; margin:0; padding:8px 0; padding-left:10px; background:url(http://img.58cdn.com.cn/ui6/my/images/loginpbg.gif) repeat-x 0 0 #fff}
+#conright .loginbox #validatecode{width:60px; margin-right:3px; _margin-right:0; padding-top:4px; padding-bottom:4px; float:inherit; *margin-top:3px; _margin-top:0}
+#conright .loginbox #validatetr td{*padding-top:12px; _padding-top:8px}
+#conright .loginbox input.wrong_color{border:1px solid #f7611e;background-color:#fff}
+#conright .loginbox input.action_color{border:1px solid #a7c0f1;height:22px; background-color:#fff}
+#conright .loginbox .logpic.wrong_color,#conright .loginbox .logpic.action_color{background-color:#fff; border:1px solid #a7c0f1; height:38px; border-right:none}
+#conright .loginbox input.pw,#conright .loginbox input.pw_wc{background:url(http://img.58cdn.com.cn/ui6/my/images/passwordbg.png?20120814) no-repeat 0 0}
+#conright .mid{ background:none; border:none; color:#f23f0f; height:21px; line-height:21px; padding:0 10px 0 60px; width:235px; position:static;}
+#conright .mid .conn{line-height:20px; line-height:22px\9; _line-height:20px; overflow:hidden}
+.loginbox table td{padding:4px 0}
+#passwordtr td{padding-bottom:0; *padding-bottom:5px; _padding-bottom:0}
+.link-login{ border-top:1px solid #eeeeee; padding-top:15px;padding-bottom:8px;padding-left:14px;padding-right:18px;position:relative;bottom:0;left:0;width: 364px;}
+/*weixin*/
+html{overflow-y: scroll;}
+.clearfix{ zoom: 1;}
+.clearfix:after{ content: '.'; font-size: 0; height: 0; visibility: hidden; display: block; clear: both;}
+.logininfo{height: auto;}
+.login_name{width: 100%;background-color:#f3f3f7;}
+.scrool-bg{padding-top: 0;}
+#conright .loginbox{margin-top: 24px;}
+/*weixin default*/
+.loico{background:none;padding:0 9px;color:#666666;}
+#login_sina{padding-left:0;}
+#login_renren{padding-right:0;border-right:none;}
+.snslogin{list-style: none;float: left;}
+.reglink{position:absolute;top:41px;right:12px;line-height: 22px;text-align: right;}
+.link-login span.lots{color:#cccccc;}
+.snslogin li{display: inline;}
+#wxwrap{width: 100%;position: relative;}
+#ewmwrap{position: absolute;top: 28px;width: 100%;}
+#tipwrap{position: absolute;top: 38px;width: 100%;text-align: center;}
+#ewmwrap p{text-align: center;color: #888888;font-weight: bold;line-height: 35px;}
+#ewmimgwrap{margin: 0 auto;width: 149px;height: 149px;border: 1px solid #d3d3d3;position: relative;}
+#expireMask{display: block;z-index: 1;cursor: pointer;}
+#expireMask div{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;opacity: 0.6;filter:Alpha(Opacity=60);}
+#expireMask p{color: #FFF;font-size: 12px;line-height: 25px;padding-top: 48px;position: absolute;top: 0;width: 100%;}
+#showtip{padding-top:245px;text-align: center;}
+#showtip a{color:#b8b8b8;}
+#usernametr,#passwordtr,#logintr{height:60px;}
+/*qq default*/
+.login_ul li { display: inline-block; width: 133px; background: #f3f3f7; cursor: pointer; text-align: center; height: 43px; line-height: 43px; margin-top: 0; float: left; border-bottom: solid 1px #dedede; font-size: 14px; font-weight: bold; color: #666666; border-left: solid 1px #dedede; }
+.login_ul li.first { border-left: none; width: 132px;}
+.login_ul li.cur { background: #ffffff; border-bottom: #ffffff 1px solid; color: #000000; }
+#login-welcome-bg { width: 500px; height: 400px; }
+#conleft { width: 500px; }
+.qqloginerror { display:none;margin: 10px 10px 0 10px; background-color: #fff2f1; color: #ff0000; font-size: 12px; line-height: 20px; padding: 9px 12px;_zoom: 1; }
+.qqloginerror a { color: #3382cf; }
+.passport-qqlogin-frame{width:400px;height:362px;}
+/* tab */
+.tablogin ul{margin-left:80px;}
+.tablogin li{float:left; display:inline; padding-right:28px;}
+.tablogin a{display:inline-block;line-height:20px; height:20px; color:#666; background:url("http://img.58cdn.com.cn/ui6/my/images/icon_log.png") no-repeat 0 1px;padding-left:20px;font-size:12px;outline:none 0; text-decoration:none;}
+.tablogin li.active a{color:#f4691c;}
+.tablogin .pu-icon:hover,.tablogin .active .pu-icon{background-position:0px -20px;text-decoration:none;color:#f4691c;}
+.tablogin .tel-icon{background-position:0px -40px;}
+.tablogin .tel-icon:hover,.tablogin .active .tel-icon{background-position:0px -61px;text-decoration:none;color:#f4691c;}
+/* mobile vcode */
+.passport-login-input-li{ margin-top:10px;*margin-top:13px;}
+.passport-login-input-li a{color:#666; font-size:12px; text-decoration:none; padding-left:8px;vertical-align: middle;}
+#vcodeTelImg{width: 120px;height:40px;vertical-align: middle;cursor:pointer;}
+#pptmobilecodeloginmobile,#pptmobilecodeloginvcode,#pptmobilecodeloginmobilecode{width:210px; height:22px; line-height:22px; border:1px solid #ddd;margin:0; padding:8px 0; padding-left:10px; background:url(http://img.58cdn.com.cn/ui6/my/images/loginpbg.gif) repeat-x 0 0 #fff;font-size: 14px;vertical-align:middle;}
+.passport-login-input-span{width:70px;display: inline-block;color:#666;text-align: right;padding-right: 12px;font-size:14px; vertical-align:middle;}
+#pptmobilecodeloginvcode{width:86px;}
+#mobilecodeloginButtonLi label{padding-right: 1px;display: inline-block;font-weight: 700;background: url(http://img.58cdn.com.cn/ui6/my/images/reg-btn.gif) right top no-repeat;height: 34px;line-height: 34px;}
+#pptmobilecodeloginButton{padding: 8px 20px;display: block;background: url(http://img.58cdn.com.cn/ui6/my/images/reg-btn.gif) no-repeat;border: none;color: #fff;font-size: 14px;font-weight: bold;cursor: pointer;margin: 0;height:34px;}
+li#mobileLoginTipLi{padding-left:80px;margin-top:5px;line-height: 21px;} #mobileLoginTipLi #mobileLoginTip{display:inline;width:auto;color:#f23f0f;}
+/* shouji querenma */
+.passport-login-mobilecode-button{width: 146px;height:28px;background: url("http://img.58cdn.com.cn/ui6/my/images/vcodebg.png") repeat-x scroll 0 0 #f5f5f5;border:1px solid #d4d4d4;text-align: center;color:#333;cursor:pointer;}
+.mobilesendtip{padding-left:82px;font-size:12px;line-height:20px; vertical-align:middle; color:#aaa;}
+.mobilesendtip img{margin-bottom:-2px;}
+/* 180sec tipstyle */
+.countdown{color:#a0a0a0;}
+#mobilecodeloginSendMobileCodeLi input{font-size: 12px;vertical-align: middle;}
+/*验证码*/
+#vcodeTelImg{width: 63px;height:36px;vertical-align: middle;}
+#pptmobilecodeloginvcode{width:111px;height:34px;line-height:34px;padding:0 10px;}
+#mobilecodeloginVcodeLi a{vertical-align: middle;font-size: 12px;color:#666;}
+#pptvalidatecode{ width:70px; margin-right:5px;}
+.sc{margin-top:5px;}
+.scrool-bg span.reg-a{margin-left: 74px;}
+
+
+.passport-login-mobilecode-button {
+    background: url("http://img.58cdn.com.cn/ui6/my/images/vcodebg1.png") no-repeat;
+    border:0 none;
+    color: #fafafa;
+    cursor: pointer;
+    height: 28px;
+    text-align: center;
+    width: 146px;
+}
+.mobilecode_yellow {
+    background-position:0 0;
+    color: #fafafa;
+}
+.mobilecode_grey {
+    background-position:0 -34px;
+    color: #a0a0a0;
+}
+
+#mobilecodeloginButtonLi label.login_grey {
+    background: url("http://img.58cdn.com.cn/ui6/my/images/reg-btn.gif") no-repeat scroll right bottom rgba(0, 0, 0, 0);
+    display: inline-block;
+    font-weight: 700;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 1px;
+}
+.login_grey #pptmobilecodeloginButton {
+    background: url("http://img.58cdn.com.cn/ui6/my/images/reg-btn.gif") no-repeat scroll 0 -36px rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #a0a0a0;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    margin: 0;
+    padding: 8px 20px;
+}
+
+</style>
+
+<script>
+	$(function() {
+		var pu58login = $('.tablogin li');
+		pu58login.click(function() {
+			$.j.Cookie.set("logintab58", $(this).attr("id"), "", 30, "/login");
+			var count = pu58login.index(this);
+			var user = $('#username').val();
+			var tel = $('#pptmobilecodeloginmobile').val();
+			var rTel = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[6,7,8]{1}))+\d{8})$/;
+			$(this).addClass('active').siblings().removeClass('active');
+			if (count == 0) {
+				if (tel.match(rTel)) {
+					$('#username').val(tel).removeClass('c_ccc');
+				}
+				clickLog("from=normal_tab");
+				$('#mobilelogin').hide();
+				$('#pulogin').show();
+			} else {
+				if (user && user.match(rTel)) {
+					$('#pptmobilecodeloginmobile').val(user).removeClass('c_ccc');
+				}
+				clickLog("from=phonecode_tab");
+				$('#pulogin').hide();
+				$('#mobilelogin').show();
+			}
+
+		});
+		var login_tab58_id = $.j.Cookie.get("logintab58");
+		if (login_tab58_id && login_tab58_id != "") {
+			$("#" + login_tab58_id).click();
+		}
+	});
+ </script>
+</head>
+<body>
+<form name="submitForm" method="post" action="http://passport.58.com/dounionlogin" id="submitForm" target="formSubmitFrame">
+<input type="hidden" name="isweak" id="isweak" value="0">
+<input type="hidden" name="path" value="http://my.58.com/?pts=1438399239807">
+<input type="hidden" name="p1" id="p1">
+<input type="hidden" name="p2" id="p2">
+<input type="hidden" name="p3" id="p3">
+<input type="hidden" name="timesign" id="timesign">
+<input type="hidden" id="ptk" name="ptk" value="6ab1ff2c747b42ce93d99e680ab22448">
+<input type="hidden" id="cd" name="cd" value="3441">
+	<div id="login-header" class="win900">
+		<a href="http://www.58.com/" id="logo" style="left:20px;"><img src="./login_files/logo-49h.gif" alt="中文最大生活信息门户"></a>
+		<div id="cityname" class="loginname" style="left:208px;"><span>用户登录</span></div>
+		<div id="logintext" style="right:-10px;"><a href="/">返回首页</a></div>
+	</div>
+	
+	<div class="cb win900">
+		<div id="conleft">
+			<div id="2001"><a style="background:url(https://passport.58.com/cdnpic2/ui6/my/images/login_sj.jpg) no-repeat scroll 0 0 transparent; display:block;" id="login-welcome-bg" href="http://api.wap.58.com/api/redirect/to/wap/" target="_blank"></a></div>
+		</div>
+		<div id="conright">
+			<div class="scrool-bg">
+				<div class="login_name" id="login_name">
+					<ul class="login_ul">
+						<li id="login_tab_qq" class="first">QQ快速登录</li>
+						<li id="login_tab_weixin" class="">微信登录</li>
+						<li id="login_tab_orig" class="cur">58账号登录</li>
+					</ul>
+					<div class="c"></div>
+				</div>
+                <div id="logintit" class="logintit" style="display:none;">
+                	<span class="red">账号认证冲突！请选择账户类型</span><br>
+                    <input name="loginflag" type="radio" value="2" onclick="showSelectLoginFlag(false);" id="loginflag2"><label for="loginflag2">手机号</label>
+                    <input name="loginflag" type="radio" value="1" onclick="showSelectLoginFlag(false);" id="loginflag1"><label for="loginflag1">用户名</label>
+                </div>
+				<div class="qqlogin" style="display: none;">
+					 <script src="./login_files/qqloginscriptui" type="text/javascript"></script><div id="pptqqloginerrormsg" class="qqloginerror"></div><div id="qlogin-frm"><iframe id="qqlogin14633" style="background:#fff;" frameborder="0" scrolling="no" width="400" height="360" src="./login_files/show.html"></iframe></div><script data-qloginparams="autoLogin=0&amp;response_type=code&amp;client_id=200065&amp;viewPage=frm&amp;scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&amp;state=javaSdk-code&amp;redirect_uri=http://passport.58.com/qqloginscriptvalidate&amp;container=qlogin-frm" src="./login_files/qq-login.js"></script> 
+	
+					<script type="text/javascript">
+						function qqloginSuccessFunction(){
+							window.location.href="http://my.58.com/?pts=1438399239807";
+						}
+					</script>
+				</div>
+                <div class="weixinlogin" style="display: none;">
+                    <div id="wxwrap">
+                        <div id="ewmwrap">
+                            <p>安全登录 防止被盗</p>
+                            <div id="ewmimgwrap">
+                                <img width="149" height="149" id="wxqrcodeImg" src="./login_files/showqrcode">
+                                <div id="expireMask" style="display:none;"><div></div><p>二维码失效<br>请点击刷新</p></div>
+                            </div>
+                            <p>使用微信扫描上方二维码</p>
+                        </div>
+                        <div id="tipwrap" style="display:none">
+                            <img src="./login_files/weixin_logintip.png">
+                        </div>
+                    </div>
+                    <div id="showtip"><a href="javascript:void(0);">使用帮助</a></div>
+                </div>
+                
+			  <div class="loginbox" style="">
+                <div class="tablogin ">
+                  <ul class="clearfix">
+                      <li id="putong" class="active"><a class="pu-icon" href="javascript:;">普通登录方式</a></li>
+                      <li id="mobilecode"><a class="tel-icon" href="javascript:;">手机动态码登录</a></li>
+                  </ul>
+                </div>
+			  	
+				<div id="pulogin">
+				<div id="tipDiv"></div>
+				  <table>
+					  <tbody><tr id="usernametr"><td><span class="logpic">账户名</span></td><td><input class="inp inw c_ccc useplaceholder" type="text" id="username" name="username" size="20" value="用户名/电子邮箱/手机号码" placeholderval="用户名/电子邮箱/手机号码" autocomplete="off"></td></tr>
+					  <tr id="passwordtr"><td><span class="logpic">密码</span></td><td><input type="password" style="display:none;"><input class="inp inw c_ccc pw useplaceholder" id="password" type="password" name="password" size="20" placeholderval="" autocomplete="off" maxlength="16"></td></tr>
+					  <tr>
+					  	<td></td>
+						  <td style="padding: 0pt;">
+							  <input type="checkbox" style="vertical-align: middle;padding:0;margin:0;" id="coks" value="on" name="remember">
+							  <label class="logintip" for="coks">下次自动登录 </label>
+							  <span class="reg-a"><a href="http://passport.58.com/forgetpassword">忘记密码</a> </span>
+						  </td>
+					  </tr>
+					  <tr id="logintr">
+					  	<td></td>
+						  <td>
+							  <span class="butt" style="line-height:34px;">
+							  <input type="submit" name="btnSubmit" value="登录" class="btns" accesskey="l" id="btnSubmit" onclick="clickLog(&#39;from=login_submit&#39;);">
+							  </span>
+						  </td>
+					  </tr>
+				  </tbody></table>
+				</div>
+				<div id="mobilelogin" style="display:none">
+                  	<script src="./login_files/ui"></script><ul class="passport-login-input-ul" id="pptmobilecodeloginul">
+	<li class="passport-login-input-li" id="mobileLoginTipLi" style="display:none;">
+		<span class="passport-login-tip" id="mobileLoginTip"></span>
+	</li>
+	<input type="hidden" name="source" id="source" value="pc-login">
+	<input type="hidden" name="risktype" id="risktype" value="1">
+	<li id="mobilecodeloginMobileLi" class="passport-login-input-li">
+		<span class="passport-login-input-span">手机号</span><input type="text" class="passport-login-input passport-login-input-mobile c_ccc" value="请输入手机号" name="pptmobilecodeloginmobile" id="pptmobilecodeloginmobile" maxlength="11">
+	</li>
+	<li id="mobilecodeloginVcodeLi" class="passport-login-input-li" style="display:none;"></li>
+	<li id="mobilecodeloginSendMobileCodeLi" class="passport-login-input-li">
+		<span class="passport-login-input-span">&nbsp;</span><input type="button" name="pptmobilecodeloginresendbtn" id="pptmobilecodeloginresendbtn" value="获取手机短信确认码" class="passport-login-mobilecode-button">
+		<div id="mobilecodeloginSendMobileCodesendok" name="mobilecodeloginSendMobileCodesendok" class="mobilesendtip" style="display:;">
+		</div>
+	</li>
+	<div id="ppt_login" style="display:none;">
+		<li id="mobilecodeloginMobileCodeLi" class="passport-login-input-li">
+			<span class="passport-login-input-span">手机确认码</span><input type="text" name="pptmobilecodeloginmobilecode" id="pptmobilecodeloginmobilecode" maxlength="6" class="passport-login-input passport-login-input-mobilecode">
+		</li>
+		<li id="mobilecodeloginButtonLi" class="passport-login-input-li">
+			<span class="passport-login-input-span">&nbsp;</span>
+			<label id="mobilecodeloginButtonLable" class="login_grey"><input type="submit" name="pptmobilecodeloginButton" id="pptmobilecodeloginButton" value="登录" class="passport-login-button"></label>
+		</li>
+	</div>
+</ul>
+<script type="text/javascript">
+	var isSend = false;
+	$(function() {
+		//验证手机号
+		$("#pptmobilecodeloginmobile").bind("blur", function() {
+			$(this).val(mobileUi.QtoB(this.value));
+			if (!validMobileFormat(this.value)) {
+				$("#mobileLoginTipLi").show();
+				$(this).removeClass("c_ccc action_color");$(this).addClass("wrong_color");
+				$("#mobileLoginTip").html("请填写正确的手机号码！");
+			} else {
+				$(this).removeClass("c_ccc wrong_color action_color");
+				$("#mobileLoginTipLi").hide();
+				$("#mobileLoginTip").html("");
+			}
+			if ($(this).val() == "") {
+				$(this).addClass("c_ccc");
+				$(this).val("请输入手机号");
+			}
+		}).bind("focus", function() {
+			$("#mobileLoginTipLi").hide();
+			$(this).addClass("action_color");
+			if ($(this).val() == "请输入手机号") {
+				$(this).removeClass("c_ccc wrong_color");
+				$(this).val("");
+			}
+		}).bind("keyup", function(){
+			$(this).val($(this).val().replace(/[^0-9]/g,''));
+		});
+
+		//获取手机验证码
+		$("#pptmobilecodeloginresendbtn").bind("click", function() {
+			$("#pptmobilecodeloginresendbtn").attr("disabled", "disabled");
+			$("#mobileLoginTipLi").hide();
+			mobile = $("#pptmobilecodeloginmobile").val();
+			if (!validMobileFormat(mobile)) {
+				$("#mobileLoginTipLi").show();
+				$("#pptmobilecodeloginmobile").removeClass("action_color");$("#pptmobilecodeloginmobile").addClass("wrong_color");
+				$("#mobileLoginTip").html("请填写正确的手机号码！");
+				$("#pptmobilecodeloginresendbtn").removeAttr("disabled");
+			} else {
+				var pptmobilecodeloginvcode = "";
+				if ($("#passport-login-code") && $("#passport-login-code").html() != null) {
+					if ($("#pptmobilecodeloginvcode")) {
+						pptmobilecodeloginvcode = $("#pptmobilecodeloginvcode").val();
+					}
+				}
+				getCode(mobile, pptmobilecodeloginvcode);
+			}
+		});
+		
+
+		//验证手机确认码
+		$("#pptmobilecodeloginmobilecode").bind("blur", function() {
+			$(this).val(mobileUi.QtoB(this.value));
+			if (this.value.length < 6) {
+				$(this).removeClass("action_color");$(this).addClass("wrong_color");
+				$("#mobileLoginTipLi").show();
+				$("#mobileLoginTip").html("请填写正确的手机确认码！");
+				//按钮置灰并变为不可用状态
+				$("#mobilecodeloginButtonLable").addClass("login_grey");
+			} else {
+				//颜色变黄
+				$("#mobilecodeloginButtonLable").removeClass("login_grey");
+				
+				$(this).removeClass("wrong_color");$(this).addClass("action_color");
+				$("#mobileLoginTipLi").hide();
+				$("#mobileLoginTip").html("");
+			}
+		}).bind("focus", function() {
+			$("#mobileLoginTipLi").hide();
+			$(this).addClass("action_color");
+		}).bind("keyup", function() {
+			if (this.value.length == 6) {
+				//颜色变黄
+				$("#mobilecodeloginButtonLable").removeClass("login_grey");
+			}else{
+				//颜色变灰
+				$("#mobilecodeloginButtonLable").addClass("login_grey");
+			}
+		});
+
+		//提交登录
+		$("#pptmobilecodeloginButton").bind("click", function() {
+			//验证手机号
+			mobile = $("#pptmobilecodeloginmobile").val();
+			if(mobile == null || mobile.length == 0){
+				$("#mobileLoginTipLi").show();
+				$("#pptmobilecodeloginmobile").addClass("c_ccc wrong_color");
+				$("#mobileLoginTip").html("请输入手机号码！");
+				return false;
+			}
+			
+			if (!validMobileFormat(mobile)) {
+				$("#mobileLoginTipLi").show();
+				$("#pptmobilecodeloginmobile").addClass("c_ccc wrong_color");
+				$("#mobileLoginTip").html("请填写正确的手机号码！");
+				return false;
+			}
+			if(!isSend){
+				$("#mobileLoginTipLi").show();
+				$("#pptmobilecodeloginmobile").addClass("c_ccc wrong_color");
+				$("#mobileLoginTip").html("请点击获取手机短信确认码按钮！");
+				return false;
+			}
+			pptmobilecodeloginvcode = "";
+			//验证手机认证码
+			mobilecode = $("#pptmobilecodeloginmobilecode").val();
+			if (mobilecode.length < 6) {
+				$("#pptmobilecodeloginmobilecode").addClass("wrong_color");
+				$("#mobileLoginTipLi").show();
+				$("#mobileLoginTip").html("请填写正确的手机确认码！");
+				return false;
+			} else {
+				$("#pptmobilecodeloginmobilecode").removeClass("wrong_color");
+			}
+			codeCommitLogin(mobile, mobilecode, pptmobilecodeloginvcode);
+		});
+	});
+
+	function codeCommitLogin(mobile, mobilecode, vcode) {
+		$("#pptmobilecodeloginButton").attr("disabled", "disabled");
+		source = $("#source").val();
+		risktype = $("#risktype").val();
+		url = "https://passport.58.com/mobileauthcodelogin/login?mobile=" + mobile + "&mobilevcode=" + mobilecode + "&validatecode=" + vcode +"&source=" + source + "&risktype=" + risktype + "&callback=?";
+		$.getJSON(url, function(result) {
+			codeSuccessCommitLoginFunction(result);
+		});
+	}
+
+	function codeSuccessCommitLoginFunction(result) {
+		$("#pptmobilecodeloginButton").removeAttr("disabled");
+		if (result.code == 0) {
+			if (result.data.ppu) {
+				//need write cookie, { path: '/', expires: 1 });
+				var exp = new Date();
+				var expires_time = exp.getTime() + (14 * 24 * 60 * 60 * 1000);
+				//14 DAYS
+				$.cookie("PPU", result.data.ppu, {
+					path : result.data.path,
+					expires : expires_time
+				});
+			}
+			mobileloginSuccessFunction();
+			return true;
+		} else if (result.code == 15) {
+			$("#mobileLoginTipLi").show();
+			$("#mobileLoginTip").html("请填写正确的手机确认码！");
+			$("#pptmobilecodeloginmobilecode").removeClass("action_color");
+			$("#pptmobilecodeloginmobilecode").addClass("wrong_color");
+		} else if (result.code == 1) {
+			$("#mobileLoginTipLi").show();
+			$("#mobileLoginTip").html("请填写正确的手机号码！");
+		} else if (result.code == 9) {//高危
+			window.location.href = "http://passport.58.com/warnuser?risktype=1&path=http://my.58.com&errorpath=http://passport.58.com/login";
+		} else {
+			$("#mobileLoginTipLi").show();
+			$("#mobileLoginTip").html(result.msg);
+		} 
+	}
+
+	/**
+	 * get vcode
+	 */
+	function getValidateCode() {
+		if($("#pptmobilecodeloginvcode").val() != "请填写图片验证码"){
+			$("#pptmobilecodeloginvcode").val("");
+		}
+		$("#vcodeTelImg").attr("src", "https://passport.58.com/validatecode?temp=123" + (new Date().getTime().toString(36)));
+	}
+
+	/**
+	 * get mobile code
+	 */
+	function getCode(mobile, vcode) {
+		addLog("phonecode_btn");
+		source = $("#source").val();
+		url = "https://passport.58.com/mobileauthcodelogin/getcode?mobile=" + mobile + "&validatecode=" + vcode + "&source=" + source + "&callback=?";
+		$.getJSON(url, function(result) {
+			successGetCodeFunction(result);
+		});
+	}
+
+	function successGetCodeFunction(result) {
+		if (result.code == 0) {
+			isSend = true;
+			//增加timeout的时间倒序
+			$("#mobilecodeloginSendMobileCodesendok").show();
+			//按钮变成灰色
+			$("#pptmobilecodeloginresendbtn").removeClass("mobilecode_yellow");
+			$("#pptmobilecodeloginresendbtn").addClass("mobilecode_grey");
+			
+			var sendokhtml = '<img src="http://img.58cdn.com.cn/ui6/my/images/sendok.png"/>确认码短信已经发到您的手机，请查收！';
+			$("#mobilecodeloginSendMobileCodesendok").html(sendokhtml);
+			mobilelogincountresent(180);
+			//隐藏验证码
+			$("#mobilecodeloginVcodeLi").html("");
+			$("#mobilecodeloginVcodeLi").hide();
+			//隐藏提示语
+			$("#mobileLoginTipLi").hide();
+			$("#mobileLoginTip").html("");
+			//显示登录按钮
+			$("#ppt_login").show();
+		} else if (result.code == 98){
+			$("#mobilecodeloginVcodeLi").show();
+			//增加验证码逻辑
+			addLog("pic");
+			if (!$("#passport-login-code") || $("#passport-login-code").html() == null) {
+				var html = '<span id="passport-login-code" name=="passport-login-code" class="passport-login-input-span">验证码</span><input type="text" name="pptmobilecodeloginvcode" id="pptmobilecodeloginvcode" value="请填写图片验证码" class="passport-login-input passport-login-input-mobile c_ccc"><img align="absmiddle" name="vcodeTelImg" id="vcodeTelImg" style="height:36px;"><a href="javascript:getValidateCode();">看不清楚？</a>';
+				$("#mobilecodeloginVcodeLi").html(html);
+				//验证码
+				$("#pptmobilecodeloginvcode").bind("focus", function(){
+					if($(this).val() == "请填写图片验证码"){
+						$(this).val("");
+					}
+					$("#mobileLoginTipLi").hide();
+					$(this).removeClass("wrong_color c_ccc");
+				}).bind("blur", function(){
+					if($(this).val() == ""){
+						$(this).addClass("c_ccc");
+						$(this).val("请填写图片验证码");
+					}
+				});
+			} else {
+				$("#mobileLoginTipLi").show();
+				$("#mobileLoginTip").html("请正确填写验证码！");
+				$("#pptmobilecodeloginvcode").addClass("wrong_color");
+			}
+			getValidateCode();
+			$("#pptmobilecodeloginresendbtn").removeAttr("disabled");
+		} else{
+			$("#mobileLoginTipLi").show();
+			$("#mobileLoginTip").html(result.msg);
+			$("#pptmobilecodeloginresendbtn").removeAttr("disabled");
+		}
+	}
+
+	function addLog(type) {
+		try {
+			source = $("#source").val();
+			if (!source) {
+				clickLog("from=passport_login_" + type);
+			} else {
+				clickLog("from=" + source + "_" + type);
+			}
+		} catch (e) {
+		}
+	}
+
+	function mobilelogincountresent(resendtime) {
+		var sel = setInterval(function() {
+			if (resendtime == 0) {
+				$("#pptmobilecodeloginresendbtn").removeAttr("disabled").removeClass("countdown");
+				$("#pptmobilecodeloginresendbtn").val("获取手机短信确认码");
+				//隐藏提示信息
+				$("#mobilecodeloginSendMobileCodesendok").hide();
+				//按钮变成yellow
+				$("#pptmobilecodeloginresendbtn").removeClass("mobilecode_grey");
+				$("#pptmobilecodeloginresendbtn").addClass("mobilecode_yellow");
+				
+				clearInterval(sel);
+				return;
+			}
+			$("#pptmobilecodeloginresendbtn").attr("disabled", "disabled").addClass("countdown");
+			$("#pptmobilecodeloginresendbtn").val(resendtime + "秒,重发手机确认码");
+			resendtime--;
+		}, 1000);
+	}
+
+	var mobileUi = {
+		QtoB : function(a) {
+			for (var c = "", d = 0; d < a.length; d++) {
+				c += a.charCodeAt(d) == 12288 ? String.fromCharCode(a.charCodeAt(d) - 12256) : a.charCodeAt(d) > 65280 && a.charCodeAt(d) < 65375 ? String.fromCharCode(a.charCodeAt(d) - 65248) : String.fromCharCode(a.charCodeAt(d));
+			}
+			return c;
+		}
+	};
+
+	/**
+	 * check mobile
+	 */
+	function validMobileFormat(mobile) {
+		var numberRegStr = /^\d{11}$/;
+		var regNum = new RegExp(numberRegStr);
+		if (regNum.test(mobile)) {
+			var telRegStr = /^(13|14|15|17|18)\d{9}$/;
+			var reg = new RegExp(telRegStr);
+			if (reg.test(mobile))
+				return true;
+			else
+				return false;
+		} else {
+			return false;
+		}
+	}
+
+</script>
+                  	<script type="text/javascript">
+						function mobileloginSuccessFunction(){
+							window.location.href="http://my.58.com/?pts=1438399239807";
+						}
+					</script>
+                </div>
+                </div>
+				<div class="link-login" style="">
+					<span class="lots">使用合作网站登录：</span>
+                    <a class="reglink" href="/account/register">免费注册58同城</a>
+                     
+				 </div>
+				
+			</div><!--scrool bg-->
+		</div>
+		<div class="c"></div>
+	</div>
+	<div id="footer" class="win900">
+		<p>© dbdbd.cn </p>
+	</div>
+<input name="mcresult" value="undefined" style="display:none"></form>
+<script type="text/javascript" src="./login_files/ppt_security.js"></script>
+<script src="./login_files/portslide_v20150504140308.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var timespan = 1411093327735 - new Date().getTime();
+	var passporttimeout;
+	var upwd = "";
+	function clearPassportTimeout() {
+		clearTimeout(passporttimeout);
+	}
+
+	$.fn.placeholder = function() {
+		var defaultValue = $(this).attr('placeholderval');
+		$(this).bind("focus", function() {
+			$(this).removeClass("c_ccc");
+
+			if ($(this).attr("id") == "password")
+				$(this).removeClass("pw").removeClass("pw_wc");
+
+			if ($(this).val() == defaultValue)
+				$(this).val("");
+
+		}).bind("blur", function() {
+			if ($(this).val() == "") {
+				$(this).val(defaultValue);
+				$(this).addClass("c_ccc");
+				if ($(this).attr("id") == "password")
+					$(this).addClass("pw_wc");
+			}
+		}).bind("change", function() {
+			if ($(this).val() == "") {
+				$(this).addClass("c_ccc");
+				if ($(this).attr("id") == "password")
+					$(this).addClass("pw").addClass("pw_wc");
+			} else {
+				$(this).removeClass("c_ccc");
+				if ($(this).attr("id") == "password")
+					$(this).removeClass("pw").removeClass("pw_wc");
+			}
+		});
+	};
+
+	$(function() {
+		$("#usernametr").html('<td><span class="logpic">账户名</span></td><td><input class="inp inw c_ccc useplaceholder" type="text" id="username" name="username" size="20" value="用户名/电子邮箱/手机号码" placeholderval="用户名/电子邮箱/手机号码" autocomplete="off" /></td>');
+		$("#passwordtr").html('<td><span class="logpic">密码</span></td><td><input type="password" style="display:none;" /><input class="inp inw c_ccc pw useplaceholder" id="password" type="password" name="password" size="20" placeholderval="" autocomplete="off" maxlength="16" /></td>');
+
+		$.formValidator.initConfig({
+			formid : "submitForm",
+			errorfocus : false,
+			forcevalid : true,
+			btnid : 'btnSubmit',
+			btnvalue : '登录',
+			btnactionvalue : '登录中...',
+			fun : function() {
+				var wrongTimes = 0;
+				if (GetCookieValue('wrongtimes') != null) {
+					wrongTimes = parseInt(GetCookieValue('wrongtimes'));
+				}
+				if (wrongTimes > 4) {
+					alert("您密码输入错误次数太多,请过一段时间再试");
+					return false;
+				}
+				var timesign = new Date().getTime() + timespan;
+				if (timesign - 1411093327735 > 1800000) {
+					alert("页面已过期，请刷新后再提交");
+					window.location.href = window.location.href;
+					return false;
+				}
+				if (passwordIsWeak($("#username").val(), $("#password").val()))
+					$("#isweak").val("1");
+				else
+					$("#isweak").val("0");
+				$("#timesign").val(timesign);
+				$("#p1").val(getm32str($("#password").val(), timesign + ""));
+				$("#p2").val(getm16str($("#password").val(), timesign + ""));
+				$("#p3").val(encryptString(timesign + encodeURIComponent($("#password").val()), "010001", "008baf14121377fc76eaf7794b8a8af17085628c3590df47e6534574efcfd81ef8635fcdc67d141c15f51649a89533df0db839331e30b8f8e4440ebf7ccbcc494f4ba18e9f492534b8aafc1b1057429ac851d3d9eb66e86fce1b04527c7b95a2431b07ea277cde2365876e2733325df04389a9d891c5d36b7bc752140db74cb69f"));
+				$("#username").addClass("c_ccc").attr("readonly", "readonly");
+				$("#password").val("").addClass("c_ccc").attr("readonly", "readonly");
+				passporttimeout = setTimeout(function() {
+					//	alert("服务器繁忙，请稍后再试");
+					$("#password").val(upwd);
+					$.formValidator.subfalse('submitForm', 'btnSubmit', '登录');
+				}, 10000);
+				return true;
+			},
+			errorclass : "sc",
+			successclass : "hc",
+			focusclass : "hc",
+			tiphtml : '<div class="mid mid-t1"><div class="conn" id=\'errorTip\'>{0}</div></div>'
+		});
+
+		$("#username").formValidator({
+			onfocus : "",
+			tipid : 'tipDiv'
+		}).inputValidator({
+			onerror : "您还没有输入账户名"
+		}).functionValidator({
+			fun : function(val, elem) {
+				if (val == "用户名/电子邮箱/手机号码")
+					return "您还没有输入账户名";
+				return true;
+			}
+		}).regexValidator({
+			regexp : "^[\\w|\\u4e00-\\u9fa5|\@|\\.|\\-]{2,40}$",
+			onerror : "用户名格式错误"
+		});
+		$("#username").bind("change", function() {
+			$(this).val($.formValidator.QtoB(this.value));
+		});
+		$("#password").formValidator({
+			onfocus : "",
+			tipid : 'tipDiv'
+		}).inputValidator({
+			onerror : "您还没有输入密码"
+		}).regexValidator({
+			regexp : "^[\\s\\S]{6,}$#^(.){6,16}$",
+			onerror : "密码太短，最少为6位。#密码不应超过16个字符。"
+		});
+		$("#password").bind("change", function() {
+			upwd = $(this).val();
+		});
+		$("#validatecode").formValidator({
+			onfocus : "",
+			tipid : 'tipDiv'
+		}).inputValidator({
+			onerror : "请输入验证码"
+		}).regexValidator({
+			regexp : "^([a-zA-Z0-9]){5}$",
+			onerror : "验证码输入不正确。"
+		});
+		$("#validatecode").bind("blur", function() {
+			$(this).val($.formValidator.QtoB(this.value));
+		});
+		$("#username").bind("change", function() {
+			$(this).val($.formValidator.QtoB(this.value));
+		});
+		$('#username').placeholder();
+		$('#password').placeholder();
+		$("#submitForm").attr("target", "formSubmitFrame");
+//		$("#formSubmitFrame").get(0).contentWindow.name = "formSubmitFrame";
+	});
+
+	function clearform() {
+		$("#username").removeClass("c_ccc").removeAttr("readonly");
+		$("#password").removeClass("c_ccc").removeAttr("readonly").val(upwd);
+	}
+
+	function showvalidcode() {
+		var result;
+		if (!$("#validatetr") || $("#validatetr").html() == null) {
+			var html = '<tr id="validatetr"><td><span class="logpic">验证码</span></td><td><input class="inp inw3" id="validatecode" maxlength="5" name="validatecode" size="2" type="text"><img src="/validatecode" style="cursor: pointer; height: 32px;" id="vcodeImg" name="vcodeImg" onclick="document.getElementById(\'vcodeImg\').src=\'/validatecode?temp=123\'+ (new Date().getTime().toString(36)); _gaq.push([\'pageTracker._trackEvent\', \'58_my\', \'passport\', \'refresh\']); return false" align="absmiddle"> <a class="f12" href="javascript:void(0)" onclick="document.getElementById(\'vcodeImg\').src=\'/validatecode?temp=123\'+ (new Date().getTime().toString(36)); _gaq.push([\'pageTracker._trackEvent\', \'58_my\', \'passport\', \'refresh\']); return false">看不清？</a></td></tr>';
+			$("#passwordtr").after(html);
+			result = true;
+		} else {
+			$("#vcodeImg").attr("src", "/validatecode?temp=123" + (new Date().getTime().toString(36)));
+			result = false;
+		}
+		_gaq.push(['pageTracker._trackEvent', '58_my', 'passport', 'show']);
+		return result;
+	}
+	
+	function refreshvalidcode() {
+		if (!$("#validatetr") || $("#validatetr").html() == null) {
+		} else {
+			$("#vcodeImg").attr("src", "/validatecode?temp=123" + (new Date().getTime().toString(36)));
+		}
+		_gaq.push(['pageTracker._trackEvent', '58_my', 'passport', 'show']);
+	}
+	
+	
+	function passwordIsWeak(username, pwd) {
+		if (pwd.match("^[a-z|A-Z]+$") && (isContinuousChar(pwd) || isSameChar(pwd)))
+			return true;
+		if (pwd.match("^[\\d]+$") && (isContinuousChar(pwd) || isSameChar(pwd)))
+			return true;
+		if (pwd.match("^[_]+$"))
+			return true;
+		if (username == pwd)
+			return true;
+		return false;
+	}
+
+	function isContinuousChar(str) {
+		var str = str.toLowerCase();
+		var flag = 0;
+		for (var i = 0; i < str.length; i++) {
+			if (str.charCodeAt(i) != flag + 1 && flag != 0)
+				return false;
+			else
+				flag = str.charCodeAt(i);
+		}
+		return true;
+	}
+
+	function isSameChar(str) {
+		var str = str.toLowerCase();
+		var flag = 0;
+		for (var i = 0; i < str.length; i++) {
+			if (str.charCodeAt(i) != flag && flag != 0)
+				return false;
+			else
+				flag = str.charCodeAt(i);
+		}
+		return true;
+	}
+
+	function showSelectLoginFlag(f) {
+		if (f)
+			$("#logintit").show(500);
+		else
+			$("#logintit").hide(500);
+	}
+</script>
+<script type="text/javascript">
+function flushWxqrcode(login){
+	$.get("/wxqrcode?temp=1" + (new Date().getTime().toString(36)),
+		function(result){
+			if(result){
+				result = eval('('+result+')');
+				$("#wxqrcodeImg").attr("src", result.pic);
+				if(login)
+					flushWxqrcodeLogin();
+			}
+		}	
+	);
+}
+function flushWxqrcodeLogin(){
+	$.ajax({
+		url : "/wxqrcodelogin",
+		type : "post",
+		data : {"path":"http://bj.58.com/?pts=1411093327735"},
+		dataType : "json",
+		success : function(result){
+			if(result.type=="success"){
+				window.location.href = result.path;
+			}else if(result.type=="warnusererror"){
+				window.location.href = "/login?wuid="+result.wuid;
+			}else{
+				flushWxqrcodeLogin();
+			}
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+			flushWxqrcodeLogin();
+        }
+	});
+}
+$(function() {
+	flushWxqrcode(true);
+	setInterval("flushWxqrcode(false)", 1800000);
+});
+$(function() {
+    var login_name=$('.login_name')[0];
+    var login_name_li=login_name.getElementsByTagName('li');
+    for(var i=0;i<login_name_li.length;i++){
+        login_name_li[i].index=i;
+        login_name_li[i].onclick=function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $.j.Cookie.set("logintab", $(this).attr("id"), "", 30, "/login");
+            if(this.index == '0'){
+                $('.qqlogin').show();
+                $('.weixinlogin,.loginbox,.link-login').hide();
+                 setTimeout("clickLog('from=login_qq')",1500);
+            }else if(this.index == '1'){
+                $('.weixinlogin,.link-login').show();
+				$('.qqlogin,.loginbox').hide();
+                setTimeout("clickLog('from=login_orig')",1500);
+            }else{
+				$('.loginbox,.link-login').show();
+				$('.qqlogin,.weixinlogin').hide();
+                setTimeout("clickLog('from=login_weixin')",1500);
+            }
+        };
+    }
+    
+    $('#showtip a').mouseover(function(){
+		if(!$('#ewmwrap').is(":animated")){
+			$('#ewmwrap').fadeOut();
+			$('#tipwrap').fadeIn();
+		}		
+	}).mouseout(function(){
+		$('#ewmwrap').fadeIn();
+		$('#tipwrap').fadeOut();
+	});
+    
+    var login_tab_id = $.j.Cookie.get("logintab");
+    if(login_tab_id && login_tab_id!=""){
+    	$("#"+login_tab_id).click();
+    }
+    
+});
+
+</script>
+<script type="text/javascript">
+var iqas_mcvalue = '';var iqas_mcformula = '';$(function(){$("<input name='mcresult' value='"+eval(iqas_mcformula.replace('checkValue', iqas_mcvalue))+"' / style='display:none'>").appendTo($('#submitForm'));});
+</script>
+<script type="text/javascript">
+	document.write('<scr' + 'ipt src="' + 'http://j1.58cdn.com.cn/js/loginAd_v0.js' + '?rand=' + Math.random() + '"></scr' + 'ipt>');
+</script><script src="./login_files/loginAd_v0.js"></script>
+<script type="text/javascript">
+	document.write('<scr' + 'ipt src="' + 'http://usdtop.58.com' + '/advertising/echo.js?cityid=0&cateid=0&categorycode=2001&rand=' + Math.random() + '"></scr' + 'ipt>');
+</script><script src="./login_files/echo.js"></script>
+<iframe id="formSubmitFrame" name="formSubmitFrame" src="./login_files/submit.html" style="visibility: hidden; height: 0px; width: 0px;"></iframe>
+<script type="text/javascript">
+var _trackURL = "{'pagetype':'login','GA_pageview':''}";
+</script>
+<script src="./login_files/referrer4.js"></script> 
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="./login_files/saved_resource">
+</div>
+
+
+</body></html>

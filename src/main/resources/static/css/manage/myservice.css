@@ -1,0 +1,22 @@
+.ym-submnu {
+    border: 1px solid #DFE3E6;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+    background: #fff;
+}
+
+.ym-submnu li {
+    width: 50%;
+    margin-right: 0;
+    overflow: hidden;
+    float: left;
+    text-align:center;
+}
+.ym-tab-a {
+    font-family: "宋体";
+    color: gray;
+    font-size: 16px;
+    line-height: 40px;
+    cursor: pointer;
+}

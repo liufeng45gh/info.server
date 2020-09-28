@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  
+  <select id="getSimpleByAccount" resultType="com.lucifer.model.User">
+  	select id,account,password,enable,nick,telephone from user where account=#{account}
+  </select>
+  <select id="getSimpleByTelephone" resultType="com.lucifer.model.User">
+  	select id,account,password,enable,nick from user where telephone=#{telephone}
+  </select>
+  <select id="getSimpleByNick" resultType="com.lucifer.model.User">
+  	select id,account,password,enable,nick,telephone from user where nick=#{nick}
+  </select>
+  <select id="getUser" resultType="com.lucifer.model.User">
+  	select * from user where id=#{id}
+  </select>
+  
+  <update id="updateUserNick">
+  	update user set nick=#{nick} where id=#{id};
+  </update>
+  <update id="updatePassowrd">
+  	update user set password=#{password} where id=#{id};
+  </update>
+  
+  <select id="getUserInfoList" resultType="com.lucifer.model.User">
+   select user.*,user_token.token from user left outer join user_token on user.id=user_token.user_id where 1 = 1   
+   <if test="account != null">
+		and user.account=#{account}
+   </if> 
+   order by user.id desc  
+   <if test="offset != null and perPageCount != null">
+   		limit #{offset},#{perPageCount}
+   </if>   
+  </select>
+  <select id="getUserInfoListCount" resultType="java.lang.Integer">
+  	  select count(*) from user where 1 = 1
+  	  <if test="account != null">
+		and account=#{account}
+   	  </if> 
+  </select>
+  <insert id="insertUser">
+  	insert into user 
+  	(id, account, password, nick, enable, register_type,  telephone, email, gender, avatar)
+  	values
+  	(#{id}, #{account}, #{password}, #{nick}, 1, #{register_type},  #{telephone}, #{email}, #{gender}, #{avatar})
+  </insert>
+  <update id="updateUser">
+  	update user set password=#{password},nick=#{nick},enable=#{enable},
+  	telephone=#{telephone},email=#{email},gender=#{gender},avatar=#{avatar},birthday=#{birthday}
+  	where id=#{id}
+  </update>
+  
+  <update id="updateUserInfo">
+  	update user set 
+  	nick=#{nick},telephone=#{telephone},email=#{email},gender=#{gender},birthday=#{birthday},
+  	real_name=#{real_name},open=#{open} ,origin_place=#{origin_place},residence=#{residence}
+  	where id=#{id}
+  </update>
+  
+   <update id="updatePassword">
+  	update user set password=#{password} where id=#{id}
+  </update>
+  
+   <update id="updateUserAvatar">
+  	update user set avatar=#{avatar} where id=#{id}
+  </update>
+  
+  <select id="findUserByToken" resultType="com.lucifer.model.User">
+  	select user.* from user_token left outer join user on user_token.user_id=user.id where user_token.token=#{token}
+  </select>
+  
+  <!-- user token -->
+  <insert id="insertToken">
+  	insert into user_token (token,user_id) values(#{token},#{id})
+  </insert>
+  <update id="updateToken">
+  	update user_token set token = #{token} where user_id=#{id}
+  </update>
+  
+  <select id="getMystudentList" resultType="com.lucifer.model.User">
+  	 select id,account,password,enable,nick,type,is_member from user where regist_teacher=#{nick}
+  </select>
+	
+</mapper>

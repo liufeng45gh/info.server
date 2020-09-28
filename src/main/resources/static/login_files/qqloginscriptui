@@ -1,0 +1,52 @@
+document.domain = '58.com';
+
+document.write('<div id="pptqqloginerrormsg"  class="qqloginerror"></div><div id="qlogin-frm"></div>');
+document.write('<script	data-qloginparams="autoLogin=0&response_type=code&client_id=200065&viewPage=frm&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=javaSdk-code&redirect_uri=http://passport.58.com/qqloginscriptvalidate&container=qlogin-frm" src="http://qzonestyle.gtimg.cn/open/connect/widget/pc/login-frm/qq-login.js"></script> ');
+
+//document.write('<div id="pptqqloginerrormsg"  class="qqloginerror"></div><iframe frameborder=0 src="https://graph.qq.com/oauth2.0/authorize?autoLogin=0&response_type=code&client_id=200065&viewPage=frm&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=javaSdk-code&redirect_uri=http://passport.58.com/qqloginscriptvalidate" class="passport-qqlogin-frame" id="pptqqLoginFrame" name="pptqqLoginFrame"></iframe>');
+$(document).ready(function () {
+setInterval(function(){
+   try{
+	   $.getJSON("http://passport.58.com/qqupdatecache?callback=?",function(data){
+	   		console.log(data);  
+	    });
+    }catch(e){
+    }  
+  
+},30*60*1000);
+});
+function isExitsFunction(funcName) {
+    try {
+        if (typeof(eval(funcName)) == "function") {
+            return true;
+        }
+    } catch(e) {}
+    return false;
+}
+function handleQQLoginResult(result){  
+	var qqloginfrm = "qlogin-frm";
+	var errormsg = "pptqqloginerrormsg";
+   if(result.code==0){
+    
+ 	  qqloginSuccessFunction(result.data); 	  $("#" + qqloginfrm).hide();
+   }
+   else if(result.code==102){//SsoLoginResult.qqbindstateerror         
+          var url=result.data.url;
+          //alert(url)
+          $("#" + qqloginfrm + " iframe").get(0).src=url; 
+                    if(isExitsFunction("confirmBindFunction")){
+         	 confirmBindFunction();
+          }          
+          
+             } else if(result.code==8){//SsoLoginResult.lockerror         
+      $("#"+errormsg).show();
+      $("#"+errormsg).html("此QQ号绑写的账户“"+result.data.username+"”己被系统冻结，请尝试用其它账号登录，或者联系客服");
+      $("#" + qqloginfrm + " iframe").get(0).src="https://graph.qq.com/oauth2.0/authorize?autoLogin=0&response_type=code&client_id=200065&viewPage=frm&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=javaSdk-code&redirect_uri=http://passport.58.com/qqloginscriptvalidate";
+   }else{     
+   
+      $("#"+errormsg).show();
+      $("#"+errormsg).html(result.msg);
+      $("#" + qqloginfrm + " iframe").get(0).src="https://graph.qq.com/oauth2.0/authorize?autoLogin=0&response_type=code&client_id=200065&viewPage=frm&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=javaSdk-code&redirect_uri=http://passport.58.com/qqloginscriptvalidate";
+   }
+   
+}

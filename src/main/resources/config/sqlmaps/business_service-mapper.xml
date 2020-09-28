@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  <insert id="insertBusinessService">
+  insert into busiess_service
+  (id,title,type_b,type_s,city_id,description,linkman,user_id,telephone,created_at,updated_at)
+  values
+  (#{id},#{title},#{type_b},#{type_s},#{city_id},#{description},#{linkman},#{user_id},#{telephone},now(),now())
+  </insert>
+  <select id="userBusinessServiceList" resultType="com.lucifer.model.BusinessService">
+  select * from busiess_service where user_id = #{user_id}
+  </select>
+  <update id="refreshBusinessService">
+  update busiess_service set updated_at=now() where id=#{id}
+  </update>
+  <select id="getBusinessService" resultType="com.lucifer.model.BusinessService">
+  select * from busiess_service where id = #{id}
+  </select>
+  <update id="updateBusinessService">
+  update busiess_service set title=#{title},type_s=#{type_s},city_id=#{city_id},description=#{description},linkman=#{linkman},telephone=#{telephone},updated_at=now() where id=#{id}
+  </update>
+  <delete id="deleteBusinessService">
+  delete from busiess_service where id=#{id}
+  </delete>
+    <select id="businessListOrderByUpdatedAt" resultType="com.lucifer.model.BusinessService">
+   select * from busiess_service 
+  <if test="updated_at != null">
+  	<![CDATA[
+	where updated_at>#{updated_at}
+		]]>
+	</if> 
+  order by updated_at limit #{count}
+  </select>
+ 
+</mapper>

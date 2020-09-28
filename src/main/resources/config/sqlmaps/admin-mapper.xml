@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  
+  <select id="getAdminUserByAccount" resultType="com.lucifer.model.AdminUser">
+  	select id,account,password,nick from admin_user where account=#{account}
+  </select>
+
+  <select id="getAdminUser" resultType="com.lucifer.model.AdminUser">
+  	select * from admin_user where id=#{id}
+  </select>
+  
+  <update id="adminUpdateUserNick">
+  	update admin_user set nick=#{nick} where id=#{id};
+  </update>
+  <update id="adminUpdatePassowrd">
+  	update admin_user set password=#{password} where id=#{id};
+  </update>
+  	
+</mapper>

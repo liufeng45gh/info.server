@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">  
+  <insert id="insertCompany">
+  		insert into company (id,user_id,name,industry_id,is_intermediary,type,size,description,address,welfares,linkman,telephone,email,website,map_ponit)
+  		values
+  		(#{id},#{user_id},#{name},#{industry_id},#{is_intermediary},#{type},#{size},#{description},#{address},#{welfares},#{linkman},#{telephone},#{email},#{website},#{map_ponit})
+  </insert>
+  <select id="getUserCompany" resultType="com.lucifer.model.Company">
+  select * from company where user_id = #{user_id} limit 1
+  </select>
+  <update id="updateCompany">
+  		update company set name = #{name},industry_id=#{industry_id},is_intermediary=#{is_intermediary},type=#{type},size=#{size},description=#{description},address=#{address},
+  		welfares=#{welfares},linkman=#{linkman},telephone=#{telephone},email=#{email},website=#{website},map_ponit=#{map_ponit} where id = #{id}
+  </update>
+  
+  <!-- job part -->
+  <insert id="insertJob">
+  insert into job 
+  (id,user_id,city_id,title,industry_id,position_id,number,education,salary,work_years,description,address,contacts,telephone,email,created_at,updated_at,visible)
+  values
+  (#{id},#{user_id},#{city_id},#{title},#{industry_id},#{position_id},#{number},#{education},#{salary},#{work_years},#{description},#{address},#{contacts},#{telephone},
+  #{email},now(),now(),0)
+  </insert>
+  <select id="userJobList" resultType="com.lucifer.model.Job">
+  <![CDATA[
+  select * from job where user_id = #{user_id} and visible<2
+  ]]>
+  </select>
+  <update id="refreshJob">
+  update job set updated_at = now() where id = #{id}
+  </update>
+  <select id="getJob" resultType="com.lucifer.model.Job">
+  select * from job where id = #{id}
+  </select>
+  <update id="updateJob">
+  update job set 
+  city_id=#{city_id},title=#{title},industry_id=#{industry_id},position_id=#{position_id},
+  number=#{number},education=#{education},salary=#{salary},work_years=#{work_years},description=#{description},
+  address=#{address},contacts=#{contacts},telephone=#{telephone},email=#{email},updated_at=#{updated_at}
+  where id = #{id}
+  </update>
+  <delete id="deleteJob">
+  update  job set visible=2 where id=#{id}
+  </delete>
+  <select id="jobListOrderByUpdatedAt" resultType="com.lucifer.model.Job">
+   select * from job 
+  <if test="updated_at != null">
+  	<![CDATA[
+	where updated_at>#{updated_at}
+		]]>
+	</if> 
+  order by updated_at limit #{count}
+  </select>
+  <insert id="applyJob">
+  insert into job_apply (id,job_id,resume_id,created_at,updated_at,is_ignore) values (#{id},#{job_id},#{resume_id},now(),now(),0)
+  </insert>
+  <select id="userReceivedResumeList" resultType="com.lucifer.model.JobApply">
+		select job_apply.* from job_apply 
+		
+		left outer join job on job.id = job_apply.job_id
+		where job.user_id = #{user_id} 
+		and job_apply.is_ignore = 0
+		order by job_apply.id desc
+		limit #{offset},#{count}
+	</select>
+	<update id="ignoreResume">
+	update job_apply set is_ignore = 1 where id = #{apply_id}
+	</update>
+	<select id="getJobApply" resultType="com.lucifer.model.JobApply">
+	select * from job_apply where id = #{apply_id}
+	</select>
+	<insert id="insertInterview">
+	insert into interview (id,job_id,resume_id,content,created_at,updated_at) values (#{id},#{job_id},#{resume_id},#{content},#{created_at},#{updated_at})
+	</insert>
+</mapper>

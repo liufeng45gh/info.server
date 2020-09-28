@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  <select id="cityList"  resultType="com.lucifer.model.City">
+    select * from city
+  </select>
+  <select id="cityTopList" resultType="com.lucifer.model.City">
+  	select * from city where parent_id = 0
+  </select>
+  <select id="getCity" resultType="com.lucifer.model.City">
+  	select * from city where id=#{id}
+  </select>
+  <select id="getOneChildCity" resultType="com.lucifer.model.City">
+  	select * from city where parent_id=#{parent_id} limit 1
+  </select>
+  <select id="getCityByName" resultType="com.lucifer.model.City">
+  	select * from city where name=#{name} limit 1
+  </select>
+  <insert id="insertCity">
+  	insert into city (id ,name,password,parent_id) values (#{id},#{name},#{password},#{parent_id})
+  </insert>
+  <update id="updateCity">
+  	update city set name=#{name}, password=#{password} where id=#{id}
+  </update>
+  <delete id="deleteCity">
+  	delete from city where id=#{id};
+  </delete>
+  <select id="refCityList" resultType="com.lucifer.model.City">
+  	select distinct(name) from city where name like '${name}%' or name_py like '${name_py}%' or name_pj like '${name_pj}%'
+  </select>
+  <select id="childCityList" resultType="com.lucifer.model.City">
+    select * from city where parent_id=#{id}
+  </select>
+  <update id="updateCityPassword">
+  	update city set password=#{password} where id=#{id}
+  </update>
+	
+</mapper>

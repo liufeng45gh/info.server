@@ -1,0 +1,96 @@
+#selection {
+	width: 1198px;
+    border: solid 1px #e1e1e1;
+    margin: 0 auto 20px;
+    padding-bottom: 5px;
+    clear: both;
+    font-size: 12px;
+    color: #585858;
+    position: relative;
+    z-index: 10;
+    padding-top: 13px;
+}
+.secitem {
+    clear: both;
+    line-height: 24px;
+    height:24px;
+    //overflow: hidden;
+    padding-left: 19px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+}
+.secitem dt {
+    width: 65px;
+    float: left;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: 5px;
+}
+.secitem dd {
+    display: block;
+    zoom: 1;
+}
+.secitem a.select {
+    color: #242527;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+}
+.secitem a {
+    margin-right: 12px;
+}
+.tabsbar {
+    width: 1198px;
+    height: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 33px;
+    font-size: 14px;
+    position: relative;
+    border-bottom: 2px solid #ed7612;
+}
+
+.list-tabs {
+    background: #EE7510;
+    border: 1px solid #DC5200;
+    color: #FFF;
+    font-weight: 700;
+    float: left;
+    height: 33px;
+    line-height:33px;
+    padding: 0 15px;
+    margin-right: 4px;
+    width:100px;
+    text-align: center;
+}
+.type_select{
+	cursor: pointer;
+}
+
+.welfare li.active, .brightspot li.active {
+    border: 2px solid #f28748;
+    height: 24px;
+    padding: 0 14px;
+    background: url(http://pic2.58.com/ui7/job/hire/sel_bg.png?v=sdfsd2) no-repeat right bottom;
+}
+.welfare li, .brightspot li {
+    float: left;
+    white-space: nowrap;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    line-height: 26px;
+    text-align: center;
+    height: 26px;
+    border: 1px solid #c8c8c8;
+    margin-right: 9px;
+    cursor: pointer;
+}
+.contedit {
+    position: relative;
+    float: left;
+    display: inline;
+    vertical-align: middle;
+}
+.zidx01 {
+    z-index: 1;
+}

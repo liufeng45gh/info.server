@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.model">
+
+  <select id="getMaxId"  resultType="java.lang.Integer">
+   select  max(${filed_name_id}) from ${table_name}
+  </select>
+	<select id="getIdExist" resultType="java.lang.Integer">
+	select ${filed_name_id} from ${table_name} where ${filed_name_id}=#{filed_value_id}
+	</select>
+</mapper>

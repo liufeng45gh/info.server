@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+ 
+    <!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+ 
+    <!-- Scans within the base package of the application for @Components to configure as beans -->
+    <!-- @Controller, @Service, @Configuration, etc. -->
+    
+   
+   <context:annotation-config/>    
+	<context:component-scan base-package="com.lucifer"/>
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven />
+	<mvc:default-servlet-handler/>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/cms/self/*"/>
+			<mvc:mapping path="/cms/user/*"/>
+			<bean class="com.lucifer.interceptor.CmsCheckAuthInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/manage/*"/>
+			<bean class="com.lucifer.interceptor.WebLoginCheckInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/job/resume-select"/>
+			<bean class="com.lucifer.interceptor.WebPopLoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<aop:aspectj-autoproxy/>
+
+    
+
+    <!-- ②：启动Spring MVC的注解功能，完成请求和注解POJO的映射 --> 
+    <!-- 
+	<bean  
+	    class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">  
+	</bean>  
+	<bean  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">  
+	    <property name="messageConverters">  
+	        <list>  
+	            <bean  class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />  
+	        </list>  
+	    </property>  
+	</bean>  
+	 --> 
+	 
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	  <property name="messageConverters">  
+	        <list>  
+	            <bean  class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />  
+	        </list>  
+	    </property>  
+	</bean>
+	
+	
+	
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:database/*.properties</value>
+				<value>classpath*:solr.properties</value>
+			</list>
+		</property>
+	</bean>
+		
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_config" />
+	</bean>  
+	
+	<bean id="sqlSessionFactory_config" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource_config" />
+	<property name="mapperLocations" value="classpath*:sqlmaps/*.xml" />
+	</bean>
+	
+	<!-- 数据源定义,使用Apache DBCP 连接池 -->
+	<bean id="dataSource_config" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass">
+			<value>${driverClass}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${jdbcUrl_config}</value>
+		</property>
+		<property name="user">
+			<value>${user}</value>
+		</property>
+		<property name="password">
+			<value>${password}</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>${initialPoolSize}</value>
+		</property>
+		<property name="minPoolSize">
+			<value>${minPoolSize}</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>${maxPoolSize}</value>
+		</property>
+		<property name="maxStatements">
+			<value>${maxStatements}</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>${acquireIncrement}</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>${maxIdleTime}</value>
+		</property>
+	</bean>
+		
+	<bean id="storeBase" class="java.lang.String" >
+		<constructor-arg value="/data/www/infoweb"></constructor-arg>
+		<!--<constructor-arg value="/Users/flyxk/git/reading/reading_cloud"></constructor-arg>-->
+	</bean>
+	
+	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">    
+	    <!-- one of the properties available; the maximum file size in bytes -->  
+	    <property name="maxUploadSize" value="10000000"/>  
+	</bean>  
+	
+	
+	<bean id="smsService" class="com.lucifer.service.SMSService" >
+		<property name="smschinese_uid" value="vanthink" />
+		<property name="smschinese_key" value="7d53459eb5975a7ce8c3" />
+	</bean>
+ 
+</beans>

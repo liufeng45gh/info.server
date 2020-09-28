@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  <select id="businessTypeList"  resultType="com.lucifer.model.BusinessType">
+    select * from business_type
+  </select>
+  <select id="getBusinessType" resultType="com.lucifer.model.BusinessType">
+  	select * from business_type where id=#{id}
+  </select>
+  <select id="getOneChildBusinessType" resultType="com.lucifer.model.BusinessType">
+  	select * from business_type where parent_id=#{parent_id} limit 1
+  </select>
+  <insert id="insertBusinessType">
+  	insert into business_type (id ,name,parent_id) values (#{id},#{name},#{parent_id})
+  </insert>
+  <update id="updateBusinessType">
+  	update business_type set name=#{name} where id=#{id}
+  </update>
+  <delete id="deleteBusinessType">
+  	delete from business_type where id=#{id};
+  </delete>
+  <select id="refBusinessTypeList" resultType="com.lucifer.model.BusinessType">
+  	select distinct(name) from business_type where name like '${name}%' or name_py like '${name_py}%' or name_pj like '${name_pj}%'
+  </select>
+	
+  <select id="getBusinessTypeTopList" resultType="com.lucifer.model.BusinessType">
+  	select * from business_type where parent_id='q8bk'
+  </select>
+  
+  <select id="getBusinessTypeChildList" resultType="com.lucifer.model.BusinessType">
+  	select * from business_type where parent_id=#{id}
+  </select>
+  
+ 
+</mapper>

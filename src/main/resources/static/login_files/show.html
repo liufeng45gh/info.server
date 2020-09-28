@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0307)http://openapi.qzone.qq.com/oauth/show?which=Login&display=pc&viewPage=frm&autoLogin=0&response_type=code&client_id=200065&viewPage=frm&scope=get_user_info%2Cget_qq_level%2Cget_info%2Clist_album%2Cget_fanslist&state=javaSdk-code&redirect_uri=http%3A%2F%2Fpassport.58.com%2Fqqloginscriptvalidate&xmsgid=14633 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta charset="UTF-8">
+	<title>QQ登录</title>
+	<script type="text/javascript">
+	    document.domain = 'qq.com';
+	    window.__start = +new Date();
+	    var _speedTiming = [+new Date];
+	    (function error(monitorId){
+	        var BID = 130;
+	        var errorTransport = null;
+	        var monitorTransport = null;
+	        window.onerror = function(errorMsg, url, lineNumber) {
+	            var bid = 'bid=' + BID;
+	            var mid = '';
+	            var msg = 'msg=' + encodeURIComponent([errorMsg, url, lineNumber, navigator.userAgent].join("|_|"));
+	            var src = 'http://badjs.qq.com/cgi-bin/js_report?'+ [bid,mid,msg].join("&");
+	            errorTransport = new Image;
+	            errorTransport.onerror = errorTransport.onload = function(){
+	                errorTransport = errorTransport.onerror = errorTransport.onload = null ;
+	            };
+	            errorTransport.src = src;
+	            monitorTransport = new Image;
+	            monitorTransport.onerror = monitorTransport.onload = function(){
+	                monitorTransport = monitorTransport.onerror = monitorTransport.onload = null ;
+	            };
+	            monitorTransport.src = "http://cgi.connect.qq.com/report/report_vm?monitors=" +"["+monitorId+"]";
+	        };
+	    })(302299);
+	</script>
+	<style>
+	html,body{ padding:0; margin:0; }
+	.hide{ display:none; }
+	</style>
+	<link rel="stylesheet" href="http://qzonestyle.gtimg.cn/open_proj/qqconnect/css/58_qqlogin.css">
+</head>
+<body>
+	<div class="qq-login" id="qq-login">
+	      
+	      	<iframe id="ptlogin_iframe" src="xlogin.html" frameborder="0" width="370" height="316" class="qqlogin-frame"></iframe>
+		  
+		
+		
+		<div class="box-authorization" id="box-authorization">
+			<p class="title">58同城将获得您的QQ昵称等信息<a href="javascript:;" class="btn-green" id="btn-green">查看授权详情<i class="icon ico-up" id="icon-dir"></i></a></p>
+			<div class="detail" id="box-detail">
+				<div class="detail-wrap" id="accredit_info">
+					<p class="text pt16">该网站已有超过1百万用户使用QQ登录<br>58同城&nbsp;将获得以下权限：</p>
+					<ul class="check-list">
+						<li>
+							<input id="select_all" checked="checked" type="checkbox" value="全选">
+							<label for="select_all">全选</label>
+						</li>
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            <li>
+			              <input class="oauth_checkbox" name="api_choose" type="checkbox" id="item_80901010" value="80901010" title="默认授权 不可更改" checked="" disabled="">
+			              <label for="item_80901010">获得您的昵称、头像、性别</label>
+			            </li>
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            <li>
+			              <input class="oauth_checkbox" name="api_choose" type="checkbox" id="item_2010" value="2010" title="" checked="">
+			              <label for="item_2010">读取、发表腾讯微博信息</label>
+			            </li>
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            
+			            <li>
+			              <input class="oauth_checkbox" name="api_choose" type="checkbox" id="item_10001" value="10001" title="" checked="">
+			              <label for="item_10001">获取你的QQ等级</label>
+			            </li>
+			            
+					</ul>
+					<p class="text">授权后表明你已同意<a href="http://connect.qq.com/agreement_chs" target="_blank" class="txt-blue" title="QQ登录服务协议">QQ登录服务协议</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	var toggle = 'off';
+	var box_detail = document.getElementById('box-detail');
+	var icon = document.getElementById('icon-dir');
+	document.getElementById('btn-green').onclick = function(){
+		if(toggle === 'off') {
+			box_detail.style.display = 'block';
+			icon.className = "icon ico-down";
+			toggle = 'on';
+		} else {
+			box_detail.style.display = 'none';
+			icon.className = "icon ico-up";
+			toggle = 'off';
+		}
+	}
+
+
+    _speedTiming.push(+new Date);
+    var Q = {};
+    Q.authsCount = 3;
+    Q.isNeedLogin = false;
+    Q.crtDomain = 'http://www.58.com';
+    Q.agree = function(){
+        window.isAgreed = true;
+    };
+    Q.logout = function(){
+        window.isLogouted = true;
+    };
+    
+    Q.isNeedLogin = true;
+    Q.getParameter = function getParameter(name) {
+        var r = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)"), m = location.href.match(r);
+        return decodeURIComponent(!m ? "" : m[2]);
+    };
+    Q.ptlogin2 = function(){
+        var s_url = 'http://openapi.qzone.qq.com/oauth/login_jump';
+        s_url = 'http://xui.ptlogin2.qq.com/cgi-bin/xlogin?appid=716027609&style=23&login_text=%E6%8E%88%E6%9D%83%E5%B9%B6%E7%99%BB%E5%BD%95&hide_title_bar=1&hide_border=1&target=self&s_url=' + encodeURIComponent(s_url);
+
+        var clientId = Q.getParameter('client_id') || '';
+        clientId && (s_url += ("&pt_3rd_aid="+encodeURIComponent(clientId)));
+
+        var dmHost = ((Q.crtDomain || Q.getParameter('redirect_uri') || '').match(/http:\/\/([^/]*)\/?/i) || [])[1] || '';
+        var feed_back_link = 'http://support.qq.com/write.shtml?fid=780&SSTAG='+encodeURIComponent(dmHost) + '.appid' + clientId;
+        s_url += ('&pt_feedback_link=' + encodeURIComponent(feed_back_link));
+        document.getElementById('ptlogin_iframe').src = s_url;
+    };
+    Q.ptlogin2();
+    
+    if (!window.JSON) {
+    	document.write('<script type="text/javascript" src="http://qzonestyle.gtimg.cn/open/operate/mlib/widget/json-for-ie.js"><\/script>');
+    }
+</script>
+<script src="qlogin.js" charset="UTF-8"></script>
+<script>
+    document.write('<script src="http://tajs.qq.com/stats?sId=36511985" charset="UTF-8"><\/script>');
+</script><script src="stats" charset="UTF-8"></script>
+
+</body></html>

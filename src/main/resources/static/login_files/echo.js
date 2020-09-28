@@ -1,0 +1,1 @@
+(function() {if($('#2001')) {$('#2001').html('<a style=\"background:url(https://passport.58.com/cdnpic2/ui6/my/images/login_sj.jpg) no-repeat scroll 0 0 transparent; display:block;\" id=\"login-welcome-bg\" href=\"http://api.wap.58.com/api/redirect/to/wap/\" target=\"_blank\"></a>');}})();

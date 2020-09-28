@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">  
+  <insert id="insertResume">
+  	insert into resume 
+  	(id,title,user_id,city_id,industry_id,position_id,nature,salary,current_status,evaluation,specialty,start_work_date,open,created_at,updated_at)
+  	values
+  	(#{id},#{title},#{user_id},#{city_id},#{industry_id},#{position_id},#{nature},#{salary},#{current_status},#{evaluation},
+  	#{specialty},#{start_work_date},#{open},now(),now())
+  </insert>
+  <update id="updateResume">
+  update resume
+  set city_id = #{city_id},industry_id=#{industry_id},position_id=#{position_id},nature=#{nature},salary=#{salary},
+  		current_status=#{current_status}, evaluation=#{evaluation}, specialty=#{specialty},start_work_date=#{start_work_date} 
+  </update>
+  <select id="userResumeList" resultType="com.lucifer.model.Resume">
+  select * from resume where user_id=#{userId}
+  </select>
+  <select id="getResume" resultType="com.lucifer.model.Resume">
+  select * from resume where id = #{id}
+  </select>
+  
+  <update id="updateResumeInfo">
+  update resume
+  set title=#{title}, city_id = #{city_id},industry_id=#{industry_id},position_id=#{position_id},nature=#{nature},salary=#{salary},open=#{open},
+  		current_status=#{current_status}, evaluation=#{evaluation}, specialty=#{specialty},start_work_date=#{start_work_date} ,updated_at = now()
+  		where id = #{id}
+  </update>
+  <update id="refreshResume">
+  update resume set updated_at = now() where id = #{id}
+  </update>
+  <update id="closeResume">
+  update resume set open = 0 where id = #{id}
+  </update>
+  <update id="openResume">
+  update resume set open = 1 where id = #{id}
+  </update>
+  <select id="resumeListOrderByUpdatedAt" resultType="com.lucifer.model.Resume">
+  select * from resume 
+  <if test="updated_at != null">
+  	<![CDATA[
+	where updated_at>#{updated_at}
+		]]>
+	</if> 
+  order by updated_at limit #{count}
+  </select>
+  
+  
+  
+  	<insert id="insertJobExperence">
+	  insert into job_experience 
+	  (id,resume_id,start_date,end_date,company,job,description,salary)
+	  values
+	  (#{id},#{resume_id},#{start_date},#{end_date},#{company},#{job},#{description},#{salary})
+  	</insert>
+	
+	<select id="resumeJobExprienceList" resultType="com.lucifer.model.JobExperience">
+	select * from job_experience where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteJobExperence">
+	delete from job_experience where id = #{id}
+	</delete>
+	<select id="getJobExperience" resultType="com.lucifer.model.JobExperience">
+	select * from job_experience where id = #{id}
+	</select>
+	<update id="updateJobExprience">
+	update job_experience set start_date=#{start_date},end_date=#{end_date},company=#{company},job=#{job},description=#{description},salary=#{salary} where id = #{id}
+	</update>
+	
+	
+	<!-- 项目经验 -->
+	<insert id="insertProjectExperience">
+	insert into project_experience 
+	  (id,resume_id,start_date,end_date,name,duty,description)
+	  values
+	  (#{id},#{resume_id},#{start_date},#{end_date},#{name},#{duty},#{description})
+	</insert>
+	<select id="getProjectExperience" resultType="com.lucifer.model.ProjectExperience">
+	select * from project_experience where id = #{id}
+	</select>
+	<update id="updateProjectExperience">
+	update project_experience set start_date=#{start_date},end_date=#{end_date},name=#{name},duty=#{duty},description=#{description} where id = #{id}
+	</update>
+	<select id="resumeProjectExperienceList" resultType="com.lucifer.model.ProjectExperience">
+	select * from project_experience where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteProjectExperience">
+	delete from project_experience where id = #{id}
+	</delete>
+	
+	
+	
+	<!-- 教育经历 -->
+	<insert id="insertEducationExperience">
+	insert into education_experience 
+	  (id,resume_id,start_date,end_date,school,professional,degree)
+	  values
+	  (#{id},#{resume_id},#{start_date},#{end_date},#{school},#{professional},#{degree})
+	</insert>
+	<select id="getEducationExperience" resultType="com.lucifer.model.EducationExperience">
+	select * from education_experience where id = #{id}
+	</select>
+	<update id="updateEducationExperience">
+	update education_experience set start_date=#{start_date},end_date=#{end_date},school=#{school},professional=#{professional},degree=#{degree} where id = #{id}
+	</update>
+	<select id="resumeEducationExperienceList" resultType="com.lucifer.model.EducationExperience">
+	select * from education_experience where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteEducationExperience">
+	delete from education_experience where id = #{id}
+	</delete>
+	
+	
+	<!-- 培训经历 -->
+	<insert id="inserTrain">
+	insert into train 
+	  (id,resume_id,start_date,end_date,organization,course,description,place,certificate)
+	  values
+	  (#{id},#{resume_id},#{start_date},#{end_date},#{organization},#{course},#{description},#{place},#{certificate})
+	</insert>
+	<select id="getTrain" resultType="com.lucifer.model.Train">
+	select * from train where id = #{id}
+	</select>
+	<update id="updateTrain">
+	update train set start_date=#{start_date},end_date=#{end_date},organization=#{organization},course=#{course},description=#{description},place=#{place},certificate=#{certificate} where id = #{id}
+	</update>
+	<select id="resumeTrainList" resultType="com.lucifer.model.Train">
+	select * from train where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteTrain">
+	delete from train where id = #{id}
+	</delete>
+	
+	
+	<!-- 证书 -->
+	<insert id="insertCertificate">
+	insert into certificate 
+	  (id,resume_id,certificate.date,name,description)
+	  values
+	  (#{id},#{resume_id},#{date},#{name},#{description})
+	</insert>
+	<select id="getCertificate" resultType="com.lucifer.model.Certificate">
+	select * from certificate where id = #{id}
+	</select>
+	<update id="updateCertificate">
+	update certificate set certificate.date=#{date},name=#{name},description=#{description} where id = #{id}
+	</update>
+	<select id="resumeCertificateList" resultType="com.lucifer.model.Certificate">
+	select * from certificate where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteCertificate">
+	delete from certificate where id = #{id}
+	</delete>
+	
+	
+	<!-- 语言 -->
+	<insert id="insertLanguage">
+	insert into language 
+	  (id,resume_id,name,ability,description)
+	  values
+	  (#{id},#{resume_id},#{name},#{ability},#{description})
+	</insert>
+	<select id="getLanguage" resultType="com.lucifer.model.Language">
+	select * from language where id = #{id}
+	</select>
+	<update id="updateLanguage">
+	update language set name=#{name},ability=#{ability},description=#{description} where id = #{id}
+	</update>
+	<select id="resumeLanguageList" resultType="com.lucifer.model.Language">
+	select * from language where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteLanguage">
+	delete from language where id = #{id}
+	</delete>
+	
+	
+	<!-- 附加 -->
+	<insert id="insertExpand">
+	insert into expand 
+	  (id,resume_id,name,description)
+	  values
+	  (#{id},#{resume_id},#{name},#{description})
+	</insert>
+	<select id="getExpand" resultType="com.lucifer.model.Expand">
+	select * from expand where id = #{id}
+	</select>
+	<update id="updateExpand">
+	update expand set name=#{name},description=#{description} where id = #{id}
+	</update>
+	<select id="resumeExpandList" resultType="com.lucifer.model.Expand">
+	select * from expand where resume_id = #{resume_id}
+	</select>
+	<delete id="deleteExpand">
+	delete from expand where id = #{id}
+	</delete>
+	
+	<select id="userJobApplyRecord" resultType="com.lucifer.model.JobApply">
+	select job_apply.* from job_apply 
+	left outer join resume on resume.id = job_apply.resume_id
+	where resume.user_id = #{user_id}
+	order by job_apply.id desc limit #{offset},#{count}
+	</select>
+	
+	<select id="receiveInterviewList" resultType="com.lucifer.model.Interview">
+	select interview.* from interview 
+	left outer join resume on interview.resume_id=resume.id
+	where resume.user_id = #{user_id}
+	order by interview.id desc limit #{offset},#{count}
+	</select>
+	<select id="getInterview" resultType="com.lucifer.model.Interview">
+	select interview.* from interview 	
+	where id = #{id}
+	</select>
+</mapper>

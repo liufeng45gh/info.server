@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucifer.model">
+
+  <select id="positionList"  resultType="com.lucifer.model.Position">
+    select * from position
+  </select>
+  <select id="getPosition" resultType="com.lucifer.model.Position">
+  	select * from position where id=#{id}
+  </select>
+  <select id="getOneChildPosition" resultType="com.lucifer.model.Position">
+  	select * from position where parent_id=#{parent_id} limit 1
+  </select>
+  <insert id="insertPosition">
+  	insert into position (id ,name,parent_id) values (#{id},#{name},#{parent_id})
+  </insert>
+  <update id="updatePosition">
+  	update position set name=#{name} where id=#{id}
+  </update>
+  <delete id="deletePosition">
+  	delete from position where id=#{id};
+  </delete>
+  <select id="refPositionList" resultType="com.lucifer.model.Position">
+  	select distinct(name) from position where name like '${name}%' or name_py like '${name_py}%' or name_pj like '${name_pj}%'
+  </select>
+	
+  <select id="getPositionTopList" resultType="com.lucifer.model.Position">
+  	select * from position where parent_id='0'
+  </select>
+  
+  <select id="getPositionChildList" resultType="com.lucifer.model.Position">
+  	select * from position where parent_id=#{id}
+  </select>
+  
+ 
+</mapper>

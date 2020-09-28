@@ -1,0 +1,259 @@
+﻿@charset "utf-8";
+/*头部 搜索框*/
+.sheader .search{ height:40px; margin-right:35px; width:auto; _width:490px; }
+.sheader .searchTxt{ border-color:#e30000; border-width:2px; width:370px; }
+.sheader .searchThis,.sheader .searchAll{ border-color:#ccc; height:35px; line-height:35px; padding:0 20px; }
+.sheader .searchTxt input,.sheader .searchTxt{ height:31px; line-height:31px; _height:29px; _line-height:29px; }
+.sheader a.publishBtn,.sheader .publishBtn{ border-left:0; height:35px; line-height:35px; padding:0 15px; }
+.sheader .publish{ width: 132px; }
+.sheader .redBtnBor{ width: 100px; }
+
+/*首页公共部分*/
+.s_main .indexNav{ background-image:url("../images/home.png"); }
+.s_main a.blue{ color:#1155CC; }
+.s_main a.blue:hover{ color:#f00; }
+
+
+/*导航*/
+.s_main .indexNav{ background-position:0 -296px; background-repeat:repeat-x; border-top:1px solid #e3e3e3; border-bottom:2px solid #ce3b28; height:35px; line-height:35px; font-size:14px; margin:0 auto 10px; width:100%; }
+.s_main .indexNav li{ float:left; margin-right:5px; position:relative; }
+.s_main .indexNav a.title{ display:inline-block; padding:0 16px; }
+.s_main .indexNav li.on a.title{ background-color:#D84836; background:linear-gradient(top,#e25443,#ce3b28); background:-webkit-linear-gradient(top,#e25443,#ce3b28); border:1px solid #D84836; border-bottom:0; color:#fff; font-weight:bold; margin-top:-1px; padding:0 15px; }
+.s_main .indexNav li.on a.title:hover{ color:#fff; }
+/*导航下拉*/
+.s_main .indexNav li .childNav{ background:#fff; border:1px solid #dadada; border-top:2px solid #ce3b28; display:none; font-size:12px; left:0; overflow:hidden; padding:10px 0; position:absolute; top:35px; width:220px; z-index:100; }
+.s_main .indexNav .childNav dl{ overflow:hidden; width:222px; }
+.s_main .indexNav .childNav dt{ border-right:1px solid #dadada; border-width:0 1px; float:left; height:27px; line-height:27px; margin-right:0; overflow:hidden; }
+.s_main .indexNav li .childNav dt a{ display:inline-block; oveflow:hidden; padding:0 10px; width:90px; }
+.s_main .indexNav li .childNav dt a:hover{ background-color:#f1f1f1; color:#333; }
+
+/*划过导航 li*/
+.s_main .indexNav li:hover a.title,.s_main .indexNav li.hover a.title{ background-color:#ffecea; border:1px solid #D84836; border-bottom:0; color:#333; margin-top:-1px; padding:0 15px; }
+.s_main .indexNav li.on:hover a.title{ background-color:#D84836; }
+.s_main .indexNav li:hover .childNav,.s_main .indexNav li.hover .childNav{ display:block; }
+
+
+/*主要内容*/
+.listNav{ float:left; margin-right:-40px; overflow:hidden; width:1040px; }
+.listNav .listChild{ background:#fafafa; float:left; margin:0 40px 20px 0; width:480px; }
+.listNav .listChild h2{ font-size:14px; height:35px; line-height:35px; padding-left:10px; }
+.listNav .listChild .lists{ font-size:0; overflow:hidden; }
+.listNav .listChild .lists a{ border-left:1px solid #ddd; display:inline-block; font-size:12px; height:15px; line-height:15px; margin:0 0 10px -1px; padding:0 10px; }
+
+.cAd{width:1040px;height:100px;}
+.cAd ul li{float:left;width:320px; padding:0 10px 0 0; margin:5px 0;}
+
+/*图片部分*/
+.lolBox {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 3px 0px #e4e4e4;
+}
+.p20 {
+    padding: 20px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.title {
+    text-align: right;
+    height: 40px;
+    padding-bottom: 6px;
+    overflow: hidden;
+}
+div.titleLive h3 {
+    margin-right: 40px;
+    font-size: 30px;
+    color: #666;
+    font-weight: normal;
+}
+.title h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: ;
+    float: left;
+    line-height: 40px;
+    font-family: '微软雅黑';
+    margin-right: 40px;
+    padding: 0 0 0 16px;
+}
+.title ul {
+    margin-top: 6px;
+    position: relative;
+}
+.fl {
+    float: left;
+    display: inline-block;
+}
+ol, ul {
+    list-style: none;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.Clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+::selection {
+    background: #690;
+    color: #fff;
+}
+div.titleLive ul li.mask {
+    background: url(/images/subTab-l.jpg) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+}
+.title ul li.mask {
+    background: url(/images/subTab.jpg) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.titleLive ul li {
+    width: 88px;
+    text-align: left;
+    padding-left: 8px;
+    margin-right: 10px;
+}
+.title ul li {
+    float: left;
+    width: 84px;
+    height: 32px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+.title a {
+    font-size: 14px;
+    color: #666;
+    line-height: 56px;
+    margin-right: 12px;
+}
+#photoWrap {
+    height: 360px;
+}
+.pr {
+    position: relative;
+}
+.photoBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:1256px;
+}
+.w380 {
+    width: 380px;
+}
+.mr18 {
+    margin-right: 18px;
+}
+.mt12 {
+    margin-top: 12px;
+}
+.imgScale li p {
+    overflow: hidden;
+    background-size: cover;
+}
+.bigPhoto{
+	padding:0;
+}
+.bigPhoto li{
+	height:346px;
+}
+.bigPhoto p {
+    width: 380px;
+    height: 308px;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.bigPhoto li em {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    background: #f7f7f7;
+}
+address, caption, cite, code, dfn, em, var, font, i, u {
+    font-weight: inherit;
+    font-style: normal;
+}
+.photoList {
+    width: 800px;
+}
+.picMask{
+	margin:0;
+	padding:0;
+}
+.picMask li {
+    float: left;
+    width: 180px;
+    height:168px;
+    margin: 12px 20px 0 0;
+}
+.picMask li p {
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.picMask li p img {
+    overflow: hidden;
+    display: block;
+}
+.picMask li img {
+    width: 180px;
+    height: 120px;
+}
+img, addr, acronym, input, textarea, iframe, button {
+    vertical-align: middle;
+}
+.photoList li em {
+    background: url(http://rnimg.cn/common/v1/images/hover-photo.png) no-repeat center center;
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    top: 120px;
+    transition: 0.2s;
+}
+.picMask li a span {
+    line-height: 24px;
+    height: 48px;
+    overflow: hidden;
+    display: block;
+    color: #2a2a2a;
+    font-size: 13px;
+}
+.Clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.title ul li.active {
+    color: #fff;
+}
+.w780 {
+    width: 780px;
+}

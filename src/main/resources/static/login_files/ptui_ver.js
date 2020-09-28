@@ -1,0 +1,1 @@
+ptuiV("10131");var ptui_ver_img;var ptui_ver_url=(location.protocol=="https:"?"https":"http")+"://ui.ptlogin2.qq.com/cgi-bin/report?id=358342&t="+Math.random();ptui_ver_img=new Image();ptui_ver_img.src=ptui_ver_url;ptui_ver_img=null;
